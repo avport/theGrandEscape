@@ -9,24 +9,14 @@ let correct;
     }).then((response) => {
       //create an empty array to push our questions and answers into
       const questionsAndAnswers = [];
+
       //created a loop to loop through all 5 questions with complete data 
       for(let i=0; i < 5; i++){
+
         //created an array for all incorrect and correct answers to be pushed into
         const answers = [];
-        //created a for of loop to access all incorrect answers       
-        for (let a of response.data.results[i].incorrect_answers) {
-          //pushed incorrect answers into object in the answers array
-          answers.push({
-            answer: a,
-            correct: false
-          });
-        }
-        //push all correct answers into answer array
-        answers.push({
-          answer: response.data.results[i].correct_answer,
-          correct: true
-        });
 
+        //creating a function to shuffle the answers 
         function shuffle(answers) {
           var currentIndex = answers.length, temporaryValue, randomIndex;
         
@@ -46,7 +36,25 @@ let correct;
           return answers;
         }
 
+        //created a for of loop to access all incorrect answers       
+        for (let a of response.data.results[i].incorrect_answers) {
+
+          //pushed incorrect answers into object in the answers array
+          answers.push({
+            answer: a,
+            correct: false
+          });
+        }
+
+        //push all correct answers into answer array
+        answers.push({
+          answer: response.data.results[i].correct_answer,
+          correct: true
+        });
+
+        //calling shuffle function after all corrrect and incorrect answers have been pushed into array 
         shuffle(answers);
+        
         //push all questions and answer array into one array
         questionsAndAnswers.push({
           question: response.data.results[i].question,

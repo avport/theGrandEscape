@@ -8,6 +8,7 @@ const mainRoom = {
     <p><input type="radio" name="answer" value="A">C. {{question.answers["2"].answer}}</p>
     <p><input type="radio" name="answer" value="A">D. {{question.answers["3"].answer}}</p>
   </section>
+
     <h1>You're doing a great job! Keep it up!</h1>
   
   `,
