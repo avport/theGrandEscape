@@ -13,8 +13,15 @@ const mainRoom = {
   controller: ["TriviaService", function(TriviaService) {
     const vm = this;
 
-    vm.questions = TriviaService.getQuestions();
-    console.log(vm.questions);
+   TriviaService.getQuestions().then((response) => {
+     console.log(response); 
+   });
+    
+    
+    // for(let i=0; i < 5; i++){
+    //   console.log(vm.questions.$$state.value.data.data.results[i].correct_answer);
+    //   console.log(vm.questions.$$state.value.data.data.results[i].incorrect_answers);
+    // }
   }]
 
 
