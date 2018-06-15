@@ -29,14 +29,16 @@ const mainRoom = {
   vm.guess = (correct) => {
     console.log(correct); 
     
-    if (correct && counter<5) {
+    if (!correct) {
+      console.log("wrong");
+    } else if(correct && counter < 5) {
       counter++;
       console.log(counter); 
-    } else if (!correct) {
-      console.log("wrong"); 
-      } else if (counter >=5){
-        console.log("winner"); 
-      }
+      } 
+
+    if (counter === 5) {
+      console.log("winner");
+    }
     }
     
   
