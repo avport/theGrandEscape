@@ -3,10 +3,10 @@ const mainRoom = {
   template: `
   <section ng-repeat="question in $ctrl.questions">
     <h3>{{question.question}}</h3>
-    <p><input type="radio" name="answer" value="A">A. {{question.answers["0"].answer}}</p>
-    <p><input type="radio" name="answer" value="A">B. {{question.answers["1"].answer}}</p>
-    <p><input type="radio" name="answer" value="A">C. {{question.answers["2"].answer}}</p>
-    <p><input type="radio" name="answer" value="A">D. {{question.answers["3"].answer}}</p>
+    <p ng-repeat = "answer in question.answers">
+      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
+      </p>
+ 
   </section>
 
     <h1>You're doing a great job! Keep it up!</h1>
@@ -15,6 +15,7 @@ const mainRoom = {
 
   controller: ["TriviaService", function(TriviaService) {
     const vm = this;
+    let counter = 0; 
 
    TriviaService.getQuestions().then((response) => {
      console.log(response);
@@ -22,8 +23,24 @@ const mainRoom = {
      return response
    });
   
-  }]
 
+ 
+   
+  vm.guess = (correct) => {
+    console.log(correct); 
+    
+    if (correct && counter<5) {
+      counter++;
+      console.log(counter); 
+    } else if (!correct) {
+      console.log("wrong"); 
+      } else if (counter >=5){
+        console.log("winner"); 
+      }
+    }
+    
+  
+}]
 }
 
 angular.module("app").component("mainRoom", mainRoom);
