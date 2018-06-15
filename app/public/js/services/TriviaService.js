@@ -23,9 +23,30 @@ let correct;
         }
         //push all correct answers into answer array
         answers.push({
-          correct: true,
-          answer: response.data.results[i].correct_answer
+          answer: response.data.results[i].correct_answer,
+          correct: true
         });
+
+        function shuffle(answers) {
+          var currentIndex = answers.length, temporaryValue, randomIndex;
+        
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+        
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+        
+            // And swap it with the current element.
+            temporaryValue = answers[currentIndex];
+            answers[currentIndex] = answers[randomIndex];
+            answers[randomIndex] = temporaryValue;
+          }
+          console.log(answers);
+          return answers;
+        }
+
+        shuffle(answers);
         //push all questions and answer array into one array
         questionsAndAnswers.push({
           question: response.data.results[i].question,
