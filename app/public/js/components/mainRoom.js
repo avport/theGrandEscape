@@ -16,12 +16,7 @@ const mainRoom = {
    TriviaService.getQuestions().then((response) => {
      console.log(response); 
    });
-    
-    
-    // for(let i=0; i < 5; i++){
-    //   console.log(vm.questions.$$state.value.data.data.results[i].correct_answer);
-    //   console.log(vm.questions.$$state.value.data.data.results[i].incorrect_answers);
-    // }
+  
   }]
 
 
