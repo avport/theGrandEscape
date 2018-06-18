@@ -1,0 +1,39 @@
+/* Must style in landscape for mobile-first */
+body {
+    background: url(./images/mainroom.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    position: absolute;
+}
+
+
+@media only screen and (min-width: 600px){
+body {
+    background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+}   
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+}
+   
+
+
+@media only screen and (min-width: 1200px) {
+body{
+    height: 100vh;
+
+}   
+} 
