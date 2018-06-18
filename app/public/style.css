@@ -291,3 +291,9 @@ body{
     top: 282px;
     left: 346px;
 }
+
+.image {
+     background-color: red; 
+     ng-mouseenter="hover = true"
+     ng-mouseleave="hover = false"
+}

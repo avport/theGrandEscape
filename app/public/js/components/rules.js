@@ -1,6 +1,7 @@
 "use strict";
 const rules = {
   template: `
+  <section class="rules">
     <p>RULES PAGE</p>
     <p>
     Click on the clues located within the room image to pop up a trivia question. Correctly
@@ -8,6 +9,7 @@ const rules = {
     you must stay here forever.    
     </p>
     <a href="#!/mainroom">Press to Continue</a>
+  </section>
   `,
 
   

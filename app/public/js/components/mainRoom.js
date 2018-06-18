@@ -9,7 +9,7 @@ const mainRoom = {
     </p>
   </div>
 
-  <img ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
+  <img class = "image" ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
   <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
   <img src="./images/DesktopClock.png" class="clock">
   <img  src="./images/Globe.png" class="globe">
@@ -19,7 +19,6 @@ const mainRoom = {
   <img ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
   <img ng-click = "" src="./images/Rug.png" class="rug">
   <img src="./images/SailorHats.png" class="hats">
-  
   `,
 
   controller: ["TriviaService", function(TriviaService) {
