@@ -1,7 +1,7 @@
 "use strict";
 const mainRoom = {
   template: `
-  <section ng-repeat="question in $ctrl.questions">
+  <section ng-repeat="question in $ctrl.questions" class="questions">
     <h3>{{question.question}}</h3>
     <p ng-repeat = "answer in question.answers">
       <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
@@ -20,7 +20,6 @@ const mainRoom = {
   <img src="./images/SailorHats.png" class="hats">
 
 
-    <h1>You're doing a great job! Keep it up!</h1>
   
   `,
 
