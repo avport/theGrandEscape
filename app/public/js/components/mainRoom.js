@@ -2,12 +2,46 @@
 const mainRoom = {
   template: `
 
-  <div ng-show="$ctrl.show">
-    <p>{{$ctrl.qA.question}}</p>
-    <p ng-repeat = "answer in $ctrl.qA.answers">
-    <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
-    </p>
-  </div>
+  <section class="background"> 
+  
+    <section ng-show="$ctrl.show">
+      <p>{{$ctrl.qA.question}}</p>
+      <p ng-repeat = "answer in $ctrl.qA.answers">
+      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
+      </p>
+    </section>
+
+    <section class="main">
+      <div>1</div>
+      <div>  
+        <img ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
+      </div>
+      <div>  
+        <img  src="./images/Globe.png" class="globe">  
+        <img ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
+      </div>
+      <div>
+      <img src="./images/DesktopClock.png" class="clock">
+      </div>
+      <div>5</div>
+      <div>
+        <img ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
+        <img src="./images/MermaidPainting.png" class="mermaid">
+      </div>
+      <div>
+        <img src="./images/SailorHats.png" class="hats">
+      </div>
+      <div>
+        <img ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
+        <img ng-click = "" src="./images/Rug.png" class="rug">
+      </div>
+      <div></div>
+      <div>
+        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
+      </div>
+    </section>
+
+  </section>
 
   <img class = "image" ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
   <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
