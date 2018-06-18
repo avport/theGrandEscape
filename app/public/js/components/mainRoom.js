@@ -47,9 +47,15 @@ const mainRoom = {
       } 
 
     if (counter === 5) {
+<<<<<<< HEAD
       //console.log("winner");
       //redirects to winner page after 5 correct answers
       location.href = '#!/winner';
+=======
+       // console.log("winner");
+      //redirects to winner page after 5 correct answers 
+      location.href = '#!/winner'; 
+>>>>>>> 1d577d2fd56de46f4325c7694bf4c6a86ec0c18b
     }
     }
     
