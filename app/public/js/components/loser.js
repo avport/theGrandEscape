@@ -1,8 +1,9 @@
 "use strict";
 const loser = {
   template: `
+    <p>Loser PAGE</p>
     <h1>Sorry you lost</h1>
-    <button type="button">Press to play again</button> //TODO: Need a function(?) to enter the game
+    <a href="#!/welcome">Click to Play Again</a>
   `,
 
   
