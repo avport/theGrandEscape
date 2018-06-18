@@ -5,9 +5,20 @@ const mainRoom = {
     <h3>{{question.question}}</h3>
     <p ng-repeat = "answer in question.answers">
       <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
-      </p>
- 
+    </p>
   </section>
+
+  <img src="./images/BedPillow.png" class="bed">
+  <img src="./images/ChairPillow.png" class="chair">
+  <img src="./images/DesktopClock.png" class="clock">
+  <img src="./images/Globe.png" class="globe">
+  <img src="./images/Growler.png" class="growler">
+  <img src="./images/LowDresser.png" class="dresser">
+  <img src="./images/MermaidPainting.png" class="mermaid">
+  <img src="./images/OctopusPainting.png" class="octopus">
+  <img src="./images/Rug.png" class="rug">
+  <img src="./images/SailorHats.png" class="hats">
+
 
     <h1>You're doing a great job! Keep it up!</h1>
   
