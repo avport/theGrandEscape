@@ -1,31 +1,31 @@
 "use strict";
 const mainRoom = {
   template: `
-  <section ng-repeat="question in $ctrl.questions" ng-show = "$ctrl.show" class="questions">
-    <h3>{{ question.question }}</h3>
-    <p ng-repeat = "answer in question.answers">
-      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
+
+  <div ng-show="$ctrl.show">
+    <p>{{$ctrl.qA.question}}</p>
+    <p ng-repeat = "answer in $ctrl.qA.answers">
+    <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
     </p>
-  </section>
+  </div>
 
-  <p>{{$ctrl.questions[0].question}}</p>
-
-  <img ng-click = "$ctrl.guess()" src="./images/BedPillow.png" class="bed">
-  <img ng-click = "" src="./images/ChairPillow.png" class="chair">
-  <img ng-click = "$ctrl.guess()" src="./images/DesktopClock.png" class="clock">
-  <img ng-click = "$ctrl.guess()"" src="./images/Globe.png" class="globe">
-  <img ng-click = "" src="./images/Growler.png" class="growler">
-  <img ng-click = "" src="./images/LowDresser.png" class="dresser">
-  <img ng-click = "$ctrl.guess()" src="./images/MermaidPainting.png" class="mermaid">
-  <img ng-click = "" src="./images/OctopusPainting.png" class="octopus">
+  <img ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
+  <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
+  <img src="./images/DesktopClock.png" class="clock" data="0">
+  <img  src="./images/Globe.png" class="globe" data="2">
+  <img ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler">
+  <img ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
+  <img src="./images/MermaidPainting.png" class="mermaid" data="3">
+  <img ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
   <img ng-click = "" src="./images/Rug.png" class="rug">
-  <img ng-click = "$ctrl.guess()" src="./images/SailorHats.png" class="hats">
+  <img src="./images/SailorHats.png" class="hats" data="4">
   
   `,
 
   controller: ["TriviaService", function(TriviaService) {
     const vm = this;
-    let counter = 0; 
+    let counter = 0;
+    
 
    TriviaService.getQuestions().then((response) => {
      console.log(response);
@@ -34,7 +34,12 @@ const mainRoom = {
    });
   
 
- 
+   vm.qPopup = (index) => {
+    console.log(index);
+    console.log(vm.questions[index]);
+    vm.show = true;
+    vm.qA = vm.questions[index];
+   }
    
   vm.guess = (correct) => {
     console.log(correct); 
@@ -54,14 +59,6 @@ const mainRoom = {
       location.href = '#!/winner';
     }
     }
-    
-  vm.showQuestion = () => {
-    vm.show = true; 
-  }
-
-  vm.closeQuestion = () => {
-    vm.show = false; 
-  }
 }]
 }
 
