@@ -8,6 +8,8 @@ const mainRoom = {
     </p>
   </section>
 
+  <p>{{$ctrl.questions[0].question}}</p>
+
   <img ng-click = "$ctrl.guess()" src="./images/BedPillow.png" class="bed">
   <img ng-click = "" src="./images/ChairPillow.png" class="chair">
   <img ng-click = "$ctrl.guess()" src="./images/DesktopClock.png" class="clock">
