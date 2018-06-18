@@ -14,6 +14,10 @@ body {
     position: absolute;
 }
 
+p {
+    color: white; 
+}
+
 .bed {
     width: 82px;
     height: 57px;
@@ -80,10 +84,6 @@ body {
     top: 185px;
     left: 164px;
     position: fixed
-}
-
-.questions {
-    display: none;
 }
 
 

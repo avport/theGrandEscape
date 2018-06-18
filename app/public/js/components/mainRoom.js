@@ -1,25 +1,23 @@
 "use strict";
 const mainRoom = {
   template: `
-  <section ng-repeat="question in $ctrl.questions" class="questions">
-    <h3>{{question.question}}</h3>
+  <section ng-repeat="question in $ctrl.questions" ng-show = "$ctrl.show" class="questions">
+    <h3>{{ question.question }}</h3>
     <p ng-repeat = "answer in question.answers">
       <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
     </p>
   </section>
 
-  <img src="./images/BedPillow.png" class="bed">
-  <img src="./images/ChairPillow.png" class="chair">
-  <img src="./images/DesktopClock.png" class="clock">
-  <img src="./images/Globe.png" class="globe">
-  <img src="./images/Growler.png" class="growler">
-  <img src="./images/LowDresser.png" class="dresser">
-  <img src="./images/MermaidPainting.png" class="mermaid">
-  <img src="./images/OctopusPainting.png" class="octopus">
-  <img src="./images/Rug.png" class="rug">
-  <img src="./images/SailorHats.png" class="hats">
-
-
+  <img ng-click = "$ctrl.guess()" src="./images/BedPillow.png" class="bed">
+  <img ng-click = "" src="./images/ChairPillow.png" class="chair">
+  <img ng-click = "$ctrl.guess()" src="./images/DesktopClock.png" class="clock">
+  <img ng-click = "$ctrl.guess()"" src="./images/Globe.png" class="globe">
+  <img ng-click = "" src="./images/Growler.png" class="growler">
+  <img ng-click = "" src="./images/LowDresser.png" class="dresser">
+  <img ng-click = "$ctrl.guess()" src="./images/MermaidPainting.png" class="mermaid">
+  <img ng-click = "" src="./images/OctopusPainting.png" class="octopus">
+  <img ng-click = "" src="./images/Rug.png" class="rug">
+  <img ng-click = "$ctrl.guess()" src="./images/SailorHats.png" class="hats">
   
   `,
 
@@ -38,28 +36,30 @@ const mainRoom = {
    
   vm.guess = (correct) => {
     console.log(correct); 
-    
+    vm.show = true; 
     if (!correct) {
       console.log("wrong");
+
     } else if(correct && counter < 5) {
       counter++;
+      vm.show = false; 
       console.log(counter); 
       } 
 
     if (counter === 5) {
-<<<<<<< HEAD
       //console.log("winner");
       //redirects to winner page after 5 correct answers
       location.href = '#!/winner';
-=======
-       // console.log("winner");
-      //redirects to winner page after 5 correct answers 
-      location.href = '#!/winner'; 
->>>>>>> 1d577d2fd56de46f4325c7694bf4c6a86ec0c18b
     }
     }
     
-  
+  vm.showQuestion = () => {
+    vm.show = true; 
+  }
+
+  vm.closeQuestion = () => {
+    vm.show = false; 
+  }
 }]
 }
 
