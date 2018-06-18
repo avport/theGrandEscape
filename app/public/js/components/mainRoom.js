@@ -47,7 +47,9 @@ const mainRoom = {
       } 
 
     if (counter === 5) {
-      console.log("winner");
+      //console.log("winner");
+      //redirects to winner page after 5 correct answers
+      location.href = '#!/winner';
     }
     }
     
