@@ -20,6 +20,7 @@
     position: fixed;
 }
 
+/* 568 x 320 */
 @media only screen and (max-width: 600px) and (orientation: landscape) {
 .background {
     width: 568px;
@@ -96,7 +97,7 @@
 }
 }
 
-
+/* 1024 x 634 */
 @media only screen and (max-width: 1024px) and (min-width: 601px) and (orientation: landscape) {
     .background {
         width: 1024px;
@@ -185,80 +186,70 @@
 }   
 .bed {
     width: 172px;
-    height: 88px;
-    top: 330px;
-    left: 114px;
+    height: 115px;
+    top: 456px;
+    left: 109px;
     position: absolute;
-
 }
 .chair {
     width: 153px;
-    height: 90px;
-    top: 255px;
-    left: 923px;
+    height: 126px;
+    top: 347px;
+    left: 917px;
     position: absolute;
-
 }
 .clock {
     width: 116px;
-    height: 45px;
-    top: 154px;
-    left: 728px;
+    height: 64px;
+    top: 208px;
+    left: 721px;
     position: absolute;
-
 }
 .globe {
     width: 90px;
-    height: 89px;
-    top: 182px;
+    height: 127px;
+    top: 247px;
     left: 585px;
+    position: absolute;
 }
 .growler {
-    width: 37px;
-    height: 63px;
-    top: 78px;
-    left: 296px;  
+    width: 45px;
+    height: 83px;
+    top: 110px;
+    left: 288px;
     position: absolute;
-  
 }
 .dresser {
     width: 207px;
-    height: 150px;
-    top: 252px;
-    left: 450px;  
+    height: 204px;
+    top: 347px;
+    left: 450px;
     position: absolute;
- 
 }
 .mermaid {
     width: 138px;
-    height: 107px;
-    top: 247px;
-    left: 1px;  
+    height: 152px;
+    top: 334px;
+    left: 1px;
     position: absolute;
  
 }
 .octopus {
     width: 184px;
-    height: 149px;
+    height: 202px;
     top: -1px;
-    left: 468px;    
+    left: 468px;
     position: absolute;
-
 }
-/* .rug {
-    display: inline-block;
-    top: 100px;
-    left: 20px;
-    height: 50px;
-    width: 50px;
-} */
+ .rug {
+    display: none;
+} 
 .hats {
     width: 51px;
-    height: 33px;
-    top: 282px;
-    left: 346px;
+    height: 44px;
+    top: 387px;
+    left: 342px;
     position: absolute;
-
 }
 
 
