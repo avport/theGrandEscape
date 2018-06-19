@@ -1,9 +1,9 @@
 "use strict";
 const mainRoom = {
   template: `
-
   <section class="background"> 
-  <div ng-init="$ctrl.countController(countDown)">{{countDown}}</div>
+  <p style="color: white"> {{$ctrl.countDown}} </p>
+  
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
@@ -81,17 +81,17 @@ const mainRoom = {
       location.href = '#!/winner';
     }
     }
-    function countController(countDown){
+    function countController(){
       vm.countDown = 20;    
       let timer = setInterval(function(){
           vm.countDown--;
           console.log(vm.countDown);
-          return countDown;
-      }, 1000); 
-       
+      }, 1000);   
+      //console.log(vm.countDown);
+      return vm.countDown;
   }
-  
   countController();
+
 }]
 }
 
