@@ -3,10 +3,7 @@ const mainRoom = {
   template: `
 
   <section class="background"> 
-  <button class="btn" ng-click="timerStart()" type="button">Start</button>
-  <timer class="ng-isolate-scope"><span class="ng-binding ng-scope">{{timer}}</span></timer>
-  <span class="ng-binding ng-scope">{{timer}}</span>
-  <button class="btn" ng-click="timerStop()" type="button">Stop</button>
+  <div ng-init="$ctrl.countController(countDown)">{{countDown}}</div>
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
@@ -84,6 +81,17 @@ const mainRoom = {
       location.href = '#!/winner';
     }
     }
+    function countController(countDown){
+      vm.countDown = 20;    
+      let timer = setInterval(function(){
+          vm.countDown--;
+          console.log(vm.countDown);
+          return countDown;
+      }, 1000); 
+       
+  }
+  
+  countController();
 }]
 }
 
