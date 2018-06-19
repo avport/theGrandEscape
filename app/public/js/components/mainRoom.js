@@ -3,7 +3,10 @@ const mainRoom = {
   template: `
 
   <section class="background"> 
-  
+  <button class="btn" ng-click="timerStart()" type="button">Start</button>
+  <timer class="ng-isolate-scope"><span class="ng-binding ng-scope">{{timer}}</span></timer>
+  <span class="ng-binding ng-scope">{{timer}}</span>
+  <button class="btn" ng-click="timerStop()" type="button">Stop</button>
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
