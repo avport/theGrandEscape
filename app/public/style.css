@@ -1,3 +1,11 @@
+* {  margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+
+
+
 /* Must style in landscape for mobile-first */
 /* iPhone 5/SE landscape */
 .background {
@@ -12,7 +20,11 @@
     width: 100vw;
     max-width: 100%;
     /* position: absolute;    */
+   
 }
+
+/* font-family: 'Cormorant Unicase', serif;
+font-family: 'Nova Square', cursive; */
 
 /* @media screen and (orientation: landscape){ */
     .main {
@@ -101,6 +113,38 @@
         left: 164px;
         /* position: absolute; */
     }
+
+    .QApopup {
+        /* height: 50%; */
+        width: 50%;
+        margin: 0 auto;
+        background-color:#923337;
+        position: fixed;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column; 
+        z-index: 1;
+        padding: 10px; 
+        font-family: 'Nova Square', cursive;
+        font-family: 'Cormorant Unicase', serif;
+        top: 5%;
+        left: 0;
+        right: 0; 
+        font-size: 0.5rem; 
+        /* line-height: 1.6; */
+        border-radius: 10px; 
+      }
+
+      .question {
+        font-size: 0.7rem; 
+        line-height: 1.2; 
+    }
+    
+    .answer {
+        font-size: 0.3rem; 
+        line-height: 2; 
+    }
 /* } */
 
 
@@ -172,7 +216,39 @@ body {
     top: 151px;
     left: 173px;
 }
+.QApopup {
+    /* height: 50%; */
+    width: 60%;
+    margin: 0 auto;
+    background-color:#923337;
+    position: fixed;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column; 
+    z-index: 1;
+    padding: 10px; 
+    font-family: 'Nova Square', cursive;
+    font-family: 'Cormorant Unicase', serif
+    top: 50%;
+    left: 0;
+    right: 0; 
+    /* font-size: 1rem;  */
+    /* line-height: 1.6; */
+    border-radius: 10px; 
+  }
+
+  .question {
+    font-size: 1.1rem; 
+    line-height: 1.5; 
 }
+
+.answer {
+    font-size: 0.8rem; 
+    line-height: 1.6; 
+}
+
+
 
 
 /* 768 x 634 */
@@ -238,7 +314,37 @@ body {
         top: 272px;
         left: 221px;
     }
-}
+
+    .QApopup {
+        /* height: 50%; */
+        width: 70%;
+        margin: 0 auto;
+        background-color:#923337;
+        position: fixed;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column; 
+        z-index: 1;
+        padding: 10px; 
+        font-family: 'Nova Square', cursive;
+        font-family: 'Cormorant Unicase', serif
+        top: 50%;
+        left: 0;
+        right: 0; 
+        /* font-size: 2rem;  */
+        /* line-height: 2; */
+        border-radius: 10px; 
+      }
+      .question {
+        font-size: 2.2rem; 
+        line-height: 1.3; 
+    }
+    
+    .answer {
+        font-size: 1.8rem; 
+        line-height: 2; 
+    }
    
 
 /* 1200 x 656 */
@@ -308,5 +414,9 @@ body{
     top: 282px;
     left: 346px;
 }
+
+
+
+
 
 
