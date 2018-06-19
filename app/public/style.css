@@ -5,11 +5,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #636564; 
+    font-family: 'Nova Square', cursive;
+}
 
 
 
 /* Must style in landscape for mobile-first */
 /* iPhone 5/SE landscape */
+
+
 
 
 
@@ -130,9 +136,7 @@
     font-size: 0.3rem; 
     line-height: 2; 
 }
-body {
-    background: #636564; 
-}
+
 
 @keyframes bounceIn {
         0% {
@@ -255,6 +259,29 @@ body {
         font-size: 10px; 
         padding: 5px;
     }
+
+/* Welcome Page */
+.welcomePage {
+    background: #385F71; 
+    width: 568px;
+    height: 320px;
+    display: flex; 
+    flex-direction: column; 
+    align-content: flex-end; 
+}
+
+
+.grandEscape {
+    color: white; 
+    text-align: center; 
+   
+}
+
+a.clickToPlay {
+    color: white; 
+    background-color: #385F71;
+    margin: 0 auto; 
+}
 
 /* 1024 x 634 */
 @media only screen and (max-width: 1024px) and (min-width: 601px) and (orientation: landscape) {
@@ -474,4 +501,6 @@ body {
     font-size: 1.8rem; 
     line-height: 2; 
 }
+
+
 }

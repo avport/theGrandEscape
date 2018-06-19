@@ -1,9 +1,9 @@
 "use strict";
 const mainRoom = {
   template: `
-  <section class="background"> 
-  <p style="color: white"> {{$ctrl.countDown}} </p>
-  
+
+  <section style= "color: white" class="background"> 
+  <div  ng-show="$ctrl.countController($ctrl.countDown)" {{ $ctrl.countDown }}></div>
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
@@ -86,9 +86,10 @@ const mainRoom = {
       let timer = setInterval(function(){
           vm.countDown--;
           console.log(vm.countDown);
-      }, 1000);   
-      //console.log(vm.countDown);
-      return vm.countDown;
+          console.log(setInterval); 
+        
+      }, 1000); 
+      return vm.countDown; 
   }
   countController();
 
