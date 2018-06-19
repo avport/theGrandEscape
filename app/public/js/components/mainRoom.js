@@ -4,9 +4,9 @@ const mainRoom = {
 
   <section class="background"> 
   
-    <section ng-show="$ctrl.show">
-      <p>{{$ctrl.qA.question}}</p>
-      <p ng-repeat = "answer in $ctrl.qA.answers">
+    <section class = "QApopup" ng-show="$ctrl.show">
+      <p class="question" >{{$ctrl.qA.question}}</p>
+      <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
       <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
       </p>
     </section>
