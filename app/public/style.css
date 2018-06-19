@@ -23,8 +23,19 @@
    
 }
 
+
+body {
+    background: #636564;
+    
+}
+
+*{
+    margin: 0;
+}
+
 /* font-family: 'Cormorant Unicase', serif;
 font-family: 'Nova Square', cursive; */
+
 
 /* @media screen and (orientation: landscape){ */
     .main {
@@ -44,6 +55,122 @@ font-family: 'Nova Square', cursive; */
     
     p {
         color: white; 
+    }
+
+    @keyframes bounceIn {
+        0% {
+          transform: scale(0.1);
+          opacity: 0;
+        }
+        60% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      @keyframes spin {
+        from {
+            transform:rotate(0deg);
+        }
+        to {
+            transform:rotate(360deg);
+        }
+    }
+
+    .loser, .winner {
+        background-color: #2B4162;
+        border-radius: 100px; 
+        border: 10px double #636564;
+        color: #636564;
+        padding: 5px; 
+        height: 120px;
+        width: 200px;
+        margin: 0 auto;
+        margin-top: 50px; 
+        text-align: center;
+        animation: spin 3s;
+    }
+
+    .rules {
+        background-color: #2B4162;
+        border-radius: 30px; 
+        border: 10px double #636564;
+        color: #636564;
+        padding: 15px; 
+        height: 80px;
+        width: 430px;
+        margin: 0 auto;
+        margin-top: 80px; 
+        text-align: center;
+    }
+
+    .rules p, .winner p, .loser p {
+        padding-bottom: 5px; 
+        color: #636564;
+    }
+
+    /* .winner p {
+        padding: 5px; 
+    }
+
+    .loser p {
+        margin: 10px;
+    } */
+
+    .winners {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .winner1, .winner2 {
+        background-color: #2B4162;
+        border-radius: 100px; 
+        border: 1px dashed #636564;
+        color: #636564;
+        padding: 10px; 
+        height: 30px;
+        width: 90px;
+        margin: 10px auto;
+        text-align: center;
+        animation: bounce 1s;
+    }
+
+    @keyframes bounce {
+        from { transform: translate3d(0, 0, 0);     }
+        to   { transform: translate3d(0, 200px, 0); }
+      }
+      
+      /* Prefix Support */
+      .winner1, .winner2 {
+        -webkit-animation-name: bounce;
+        -webkit-animation-duration: .8s;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-timing-function: cubic-bezier(.5,0.05,1,.5);
+        -webkit-animation-iteration-count: infinite;
+      }
+      
+      @-webkit-keyframes bounce {
+        from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+        to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
+      }
+
+
+    .winner h1, .loser h1 {
+        font-size: 20px; 
+        margin-top: 30px;
+    }
+    a {
+        background-color: #2F2F2F;
+        border-radius: 5px; 
+        color: #636564;
+        height: 50px;
+        width: 80px; 
+        text-decoration: none;
+        font-size: 10px; 
+        padding: 5px;
     }
     
     .bed {
