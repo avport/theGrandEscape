@@ -42,17 +42,6 @@ const mainRoom = {
     </section>
 
   </section>
-
-  <img class = "image" ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
-  <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
-  <img src="./images/DesktopClock.png" class="clock">
-  <img  src="./images/Globe.png" class="globe">
-  <img ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler">
-  <img ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
-  <img src="./images/MermaidPainting.png" class="mermaid">
-  <img ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
-  <img ng-click = "" src="./images/Rug.png" class="rug">
-  <img src="./images/SailorHats.png" class="hats">
   `,
 
   controller: ["TriviaService", function(TriviaService) {
