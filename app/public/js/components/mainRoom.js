@@ -12,7 +12,6 @@ const mainRoom = {
     </section>
 
     <section class="main">
-      <div>1</div>
       <div>  
         <img ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
       </div>
@@ -23,7 +22,6 @@ const mainRoom = {
       <div>
       <img src="./images/DesktopClock.png" class="clock">
       </div>
-      <div>5</div>
       <div>
         <img ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
         <img src="./images/MermaidPainting.png" class="mermaid">
