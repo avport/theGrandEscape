@@ -37,7 +37,7 @@ const mainRoom = {
       </div>
       <div></div>
       <div>
-        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
+        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair animated">
       </div>
     </section>
     <div> {{ $ctrl.countDown }}</div>

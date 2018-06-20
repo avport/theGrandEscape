@@ -59,6 +59,11 @@ body {
    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
  }  
 
+ .chair:hover {
+    -webkit-animation: pulse 1s;
+    animation: pulse 1s;
+ }
+
   .chair {
       width: 77px;
       height: 56px;
@@ -66,6 +71,7 @@ body {
       left: 433px;
       position: absolute;
   }
+
   .clock {
       width: 72px;
       height: 31px;

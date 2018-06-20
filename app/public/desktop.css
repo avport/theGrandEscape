@@ -21,7 +21,7 @@ body {
 }
 
 /* 1440 x 750 */
-@media only screen and (max-width: 1440px) and (min-width: 1200px) and (orientation: landscape) {
+@media only screen and (max-width: 2000px) and (min-width: 1200px) and (orientation: landscape) {
   .background {
       height: 750px;
       width: 1440px;
