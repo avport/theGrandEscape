@@ -3,7 +3,7 @@ const mainRoom = {
   template: `
 
   <section style= "color: white" class="background"> 
-  <div  ng-show="$ctrl.countController($ctrl.countDown)" {{ $ctrl.countDown }}></div>
+  <div> {{ $ctrl.countDown }}</div>
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
@@ -44,56 +44,61 @@ const mainRoom = {
   </section>
   `,
 
-  controller: ["TriviaService", function(TriviaService) {
+  controller: ["TriviaService", "$interval", function (TriviaService, $interval) {
     const vm = this;
     let counter = 0;
-    
 
-   TriviaService.getQuestions().then((response) => {
-     console.log(response);
-     vm.questions = response 
-     return response
-   });
-  
 
-   vm.qPopup = (index) => {
-    console.log(index);
-    console.log(vm.questions[index]);
-    vm.show = true;
-    vm.qA = vm.questions[index];
-   }
-   
-  vm.guess = (correct) => {
-    console.log(correct); 
-    vm.show = true; 
-    if (!correct) {
-      console.log("wrong");
+    TriviaService.getQuestions().then((response) => {
+      console.log(response);
+      vm.questions = response
+      return response
+    });
 
-    } else if(correct && counter < 5) {
-      counter++;
-      vm.show = false; 
-      console.log(counter); 
-      } 
 
-    if (counter === 5) {
-      //console.log("winner");
-      //redirects to winner page after 5 correct answers
-      location.href = '#!/winner';
+    vm.qPopup = (index) => {
+      console.log(index);
+      console.log(vm.questions[index]);
+      vm.show = true;
+      vm.qA = vm.questions[index];
     }
-    }
-    function countController(){
-      vm.countDown = 20;    
-      let timer = setInterval(function(){
-          vm.countDown--;
-          console.log(vm.countDown);
-          console.log(setInterval); 
-        
-      }, 1000); 
-      return vm.countDown; 
-  }
-  countController();
 
-}]
+    vm.guess = (correct) => {
+      console.log(correct);
+      vm.show = true;
+      if (!correct) {
+        console.log("wrong");
+
+      } else if (correct && counter < 5) {
+        counter++;
+        vm.show = false;
+        console.log(counter);
+      }
+
+      if (counter === 5) {
+        //console.log("winner");
+        //redirects to winner page after 5 correct answers
+        location.href = '#!/winner';
+      }
+    }
+
+    // function countController() {
+    //   vm.countDown = 20;
+    //   let timer = setInterval(function () {
+    //     vm.countDown--;
+    //     // console.log(vm.countDown);
+    //   }, 1000);
+    //   return vm.countDown;
+    // }
+
+    vm.countDown = 20;
+    $interval(function () {
+      if (vm.countDown !== 0){
+        console.log(vm.countDown--);
+      }
+    }, 1000);
+
+  }]
 }
 
 angular.module("app").component("mainRoom", mainRoom);
