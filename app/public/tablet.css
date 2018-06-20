@@ -1,32 +1,15 @@
-/** {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #636564; 
-  font-family: 'Nova Square', cursive;
-} */
-
-/* Must style in landscape for mobile-first */
-/* iPhone 5/SE landscape */
-
-.background {
-  background: url(./images/mainroom.jpg) no-repeat center center fixed; 
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-}
-
 /* 1024 x 634 */
 @media only screen and (max-width: 1024px) and (min-width: 601px) and (orientation: landscape) {
+ 
   .background {
-      width: 1024px;
-      height: 634px;
-      position: fixed;
-  }
+    background: url(./images/mainroom.jpg) no-repeat center center fixed; 
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 1024px;
+    height: 634px;
+}
   .bed {
       width: 143px;
       height: 96px;
@@ -132,16 +115,16 @@ body {
     }
   }
 
+.logo {
+    font-size: 100px;
+}
 
-
-  .QApopup {
-      /* height: 50%; */
+ .QApopup {
       width: 60%;
       margin: 0 auto;
       background-color:#923337;
       position: fixed;
       display: flex;
-      /* justify-content: center; */
       align-items: center;
       flex-direction: column; 
       z-index: 1;
@@ -151,9 +134,13 @@ body {
       top: 50%;
       left: 0;
       right: 0; 
+      border-radius: 10px;
+
+
+      /* height: 50%; */
+      /* justify-content: center; */
       /* font-size: 1rem;  */
       /* line-height: 1.6; */
-      border-radius: 10px; 
     }
   
     .question {

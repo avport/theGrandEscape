@@ -2,13 +2,16 @@
 const welcome = {
   template: `
 
-<body >
-  <section class="welcomePage" >
-  
-  
-    <h1 class="grandEscape">The Grand Escape</h1>
-   
-    <a class="clickToPlay" href="#!/rules">Click to Play</a>
+  <body >
+  <section class="welcome">
+      <section class="title">
+        <div class="logo">
+            <p class="the">THE</p>
+            <p id="error">G<span>r</span>and</p>
+            <p id="code">Esc<span>ap</span><span>e</span></p>
+            <a class="clickToPlay" href="#!/rules">Click to Play</a>
+        </div>
+      </section>
   </section>
   <body>
   `,
