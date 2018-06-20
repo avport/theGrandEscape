@@ -1,32 +1,18 @@
-/** {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
- body {
-  background: #636564; 
-  font-family: 'Nova Square', cursive;
-} */
-
-/* Must style in landscape for mobile-first */
-/* iPhone 5/SE landscape */
-
-.background {
-  background: url(./images/mainroom.jpg) no-repeat center center fixed; 
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-}
-
 /* 1440 x 750 */
 @media only screen and (max-width: 2000px) and (min-width: 1200px) and (orientation: landscape) {
   .background {
+      background: url(./images/mainroom.jpg) no-repeat center center fixed; 
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
       height: 750px;
       width: 1440px;
       position: fixed;
   }   
+
+  .logo {
+    font-size: 200px;
+  }
   .bed {
     width: 218px;
     height: 132px;
@@ -149,4 +135,3 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-}
