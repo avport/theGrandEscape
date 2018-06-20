@@ -2,10 +2,8 @@
 const mainRoom = {
   template: `
 
-  <section class="background"> 
- 
-  
-  
+  <section style= "color: white" class="background"> 
+  <div> {{ $ctrl.countDown }}</div>
     <section class = "QApopup" ng-show="$ctrl.show">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
@@ -37,13 +35,10 @@ const mainRoom = {
       </div>
       <div></div>
       <div>
-        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair animated">
+        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
       </div>
     </section>
-    <div> {{ $ctrl.countDown }}</div>
-    <div id="myProgress"><div class="timertext">Time is running out!!!!</div>
-      <div id="myBar"></div>
-    </div>
+
   </section>
   `,
 
@@ -85,39 +80,23 @@ const mainRoom = {
       }
     }
 
-   
-   function move() {
-     let elem = document.getElementById("myBar");
-     let width = 0;
-     let id = setInterval(frame, 100); //bigger the number the slower it moves
-     function frame() {
-      if (width === 100) {
-        clearInterval(id);
-        location.href = '#!/loser';
-      } else {
-        width++;
-        elem.style.width = width + '%';
-        
+    // function countController() {
+    //   vm.countDown = 20;
+    //   let timer = setInterval(function () {
+    //     vm.countDown--;
+    //     // console.log(vm.countDown);
+    //   }, 1000);
+    //   return vm.countDown;
+    // }
+
+    vm.countDown = 20;
+    $interval(function () {
+      if (vm.countDown !== 0){
+        console.log(vm.countDown--);
       }
-     }
-      
-    }
-  move();
-   
-    //Countdown timer that we might not need anymore
-    //vm.countDown = 10;
-    // $interval(function () {
-    //   if (vm.countDown !== 0){
-    //     console.log(vm.countDown--);
-       
-    //   }
-    //   else if (vm.countDown === 0) {
-    //     location.href = '#!/loser';
-    //   }
-    // }, 1000);
-     
+    }, 1000);
+
   }]
-  
 }
 
 angular.module("app").component("mainRoom", mainRoom);
