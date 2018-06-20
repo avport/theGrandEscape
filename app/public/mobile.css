@@ -340,6 +340,7 @@
       background-color: #385F71;
       margin: 0 auto; 
   }
+
   img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
