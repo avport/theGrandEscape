@@ -95,6 +95,40 @@ body {
       left: 161px;
       position: absolute;
   }
+
+  #myProgress {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    text-align: right;
+  }
+  
+  #myBar {
+    position: absolute;
+    bottom: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #923337;
+  }
+
+  .timertext {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    color: #ddd;
+    text-align: center;
+    z-index: 100; /*the higher the number means its on the top of the pile*/
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
   }
   
   
