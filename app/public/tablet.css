@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background: #636564; 
   font-family: 'Nova Square', cursive;
-}
+} */
 
 /* Must style in landscape for mobile-first */
 /* iPhone 5/SE landscape */
