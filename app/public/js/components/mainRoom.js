@@ -9,7 +9,7 @@ const mainRoom = {
     <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
-      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
+      <input type = "radio" name = "answer" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
       </p>
     </section>
 
@@ -19,7 +19,7 @@ const mainRoom = {
       </div>
       <div>  
         <img  src="./images/Globe.png" class="globe">  
-        <img disableclick ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
+        <img ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
       </div>
       <div>
       <img src="./images/DesktopClock.png" class="clock">
@@ -64,7 +64,7 @@ const mainRoom = {
       console.log(vm.questions[index]);
       vm.show = true;
       vm.qA = vm.questions[index];
-      document.querySelector("." + className).removeAttribute("ng-click");
+      // document.querySelector("." + className).removeAttribute("ng-click");
     }
 
     vm.guess = (correct) => {
