@@ -1,12 +1,12 @@
 /* 2000 x ??? */
-@media only screen and (min-width: 2000px) and (orientation: landscape) {
+@media only screen and (max-width: 5000px) and (min-width: 2000px) and (orientation: landscape) {
   .background {
       background: url(./images/mainroom.jpg) no-repeat center center fixed; 
       background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
       height: 750px;
-      width: 2000px;
+      width: 1440px;
       position: fixed;
   }   
 
