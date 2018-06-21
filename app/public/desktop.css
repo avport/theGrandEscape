@@ -37,6 +37,7 @@
     left: 90px;
     position: absolute;
   }
+  
   .chair {
     width: 190px;
     height: 151px;
@@ -44,6 +45,7 @@
     left: 962px;
     position: absolute;
   }
+
   .clock {
     width: 147px;
     height: 70px;
@@ -51,6 +53,7 @@
     left: 765px;
     position: absolute;
   }
+
   .globe {
     width: 119px;
     height: 138px;
@@ -58,6 +61,7 @@
     left: 607px;
     position: absolute;
   }
+
   .growler {
     width: 54px;
     height: 99px;
@@ -65,6 +69,7 @@
     left: 304px;
     position: absolute;
   }
+
   .dresser {
     width: 220px;
     height: 224px;
@@ -72,14 +77,15 @@
     left: 479px;
     position: absolute;
   }
+
   .mermaid {
     width: 152px;
     height: 172px;
     top: 352px;
     left: 1px;
     position: absolute;
-   
   }
+
   .octopus {
     width: 196px;
     height: 214px;
@@ -87,9 +93,11 @@
     left: 495px;
     position: absolute;
   }
+
    .rug {
       display: none;
   } 
+
   .hats {
     width: 60px;
     height: 47px;
@@ -100,61 +108,14 @@
 
   /* end icon positioning */
   
-/* Styling for timer bar */
-#myProgress {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background-color: #ddd;
-  text-align: right;
-}
-
-#myBar {
-  position: absolute;
-  bottom: 0;
-  width: 0%;
-  height: 100%;
-  background-color: #923337;
-}
-
+/* Styling for timer bar 
 .timertext {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   height: 20px;
-  color: #ddd;
-  text-align: center;
-  z-index: 500; /*the higher the number means its on the top of the pile*/
-  animation: blinker 1s linear infinite;
-}
+}*/
 
-/*animation for timer bar text */
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
 
-  .QApopup {
-      width: 70%;
-      margin: 0 auto;
-      background-color:#923337;
-      position: fixed;
-      z-index: 1;
-      padding: 10px; 
-      font-family: 'Cormorant Unicase', serif;
-      top: 50%;
-      left: 0;
-      right: 0; 
-      border-radius: 10px; 
-    /* possibly delete */
-      display: flex;
-      align-items: center;
-      flex-direction: column; 
-    }
-
-    .question {
+ /* question and answer popup */
+  .question {
       font-size: 2.2rem; 
       line-height: 1.3; 
   }
@@ -165,14 +126,11 @@
   }
 
 .loser, .winner {
-      background-color:#923337; 
-      z-index: 1;
-      font-family: 'Nova Square', cursive;
-      font-size: 1.75rem; 
+      font-size: 3.75rem; 
       border-radius: 10px; 
       padding: 5px; 
-      height: 150px;
-      width: 200px;
+      height: 275px;
+      width: 672px;
       text-align: center;
       animation: spin 3s;
       margin: 0 auto; 

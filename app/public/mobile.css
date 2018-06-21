@@ -5,13 +5,9 @@
     box-sizing: border-box;
   }
   
-  /* body { 
-    font-family: 'Nova Square', cursive;
-  } */
-  
   /* iPhone 5/SE landscape */
   
-  @media only screen and (max-width: 600px) and (orientation: landscape) {
+  /* @media only screen and (max-width: 600px) and (orientation: landscape)  */
       .background {
           background: url(./images/mainroom.jpg) no-repeat center center fixed; 
           background-position: center top;
@@ -41,8 +37,6 @@
       /*Reflection animation*/
       -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
       }
-  
-
   
 /* icon shake in mainroom */  
     img:hover {
@@ -143,7 +137,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 20px;
+      height: 7%;
       background-color: #ddd;
       text-align: right;
     }
@@ -158,13 +152,13 @@
   
     .timertext {
       position: absolute;
-      bottom: 0;
       width: 100%;
       height: 20px;
       color: #ddd;
       text-align: center;
       z-index: 100; /*the higher the number means its on the top of the pile*/
       animation: blinker 1s linear infinite;
+      font-family: 'Cormorant Unicase', serif;
     }
   
     /*animation for timer bar text */
@@ -181,26 +175,28 @@
         background-color:#923337;
         position: fixed; 
         z-index: 1;
-        padding: 10px; 
+        padding: 1%; 
         font-family: 'Cormorant Unicase', serif;
         top: 5%;
         left: 0;
         right: 0; 
-        border-radius: 10px; 
+        border-radius: .75rem; 
   /* possibly delete */
         display: flex;
-        align-items: center;
         flex-direction: column;
       }
     
     .question {
       font-size: 0.7rem; 
       line-height: 1.2; 
+      padding-bottom: 0.25rem;
+      text-align: center;
       }
   
     .answer {
       font-size: 0.3rem; 
       line-height: 2; 
+      margin-left: 40%;
       }
   
     .loser, .winner {
@@ -209,14 +205,16 @@
       font-family: 'Nova Square', cursive;
       font-size: 1.75rem; 
       border-radius: 10px; 
-      padding: 5px; 
+      padding: 1%; 
       height: 150px;
-      width: 200px;
+      width: 40%;
       text-align: center;
       animation: spin 3s;
       margin: 0 auto; 
       margin-top: 50px; 
       }
+
+     
   
     .winner {
       margin: 50px;
@@ -387,7 +385,7 @@
 
     #error {
           color: #fff;
-          text-shadow: 0 0 80px #ffffff,0 0 30px #636564,0 0 6px #0000ff;
+          /* text-shadow: 0 0 80px #ffffff,0 0 30px #636564,0 0 6px #0000ff; */
     }
 
     #error span {
@@ -437,4 +435,3 @@
         font-size: 10px; 
         padding: 5px;
     }
-}
