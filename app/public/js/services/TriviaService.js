@@ -18,7 +18,7 @@ let correct;
 
         //creating a function to shuffle the answers 
         function shuffle(answers) {
-          var currentIndex = answers.length, temporaryValue, randomIndex;
+          let currentIndex = answers.length, temporaryValue, randomIndex;
         
           // While there remain elements to shuffle...
           while (0 !== currentIndex) {
@@ -41,14 +41,14 @@ let correct;
 
           //pushed incorrect answers into object in the answers array
           answers.push({
-            answer: a,
+            answer: a.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
             correct: false
           });
         }
 
         //push all correct answers into answer array
         answers.push({
-          answer: response.data.results[i].correct_answer,
+          answer: response.data.results[i].correct_answer.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
           correct: true
         });
 
@@ -57,7 +57,7 @@ let correct;
         
         //push all questions and answer array into one array
         questionsAndAnswers.push({
-          question: response.data.results[i].question,
+          question: response.data.results[i].question.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
           answers: answers
         });
       }

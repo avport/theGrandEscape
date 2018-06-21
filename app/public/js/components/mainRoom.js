@@ -54,7 +54,7 @@ const mainRoom = {
 
     TriviaService.getQuestions().then((response) => {
       console.log(response);
-      vm.questions = response
+      vm.questions = response;
       return response
     });
 
