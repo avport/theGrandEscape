@@ -6,10 +6,10 @@ const mainRoom = {
  
   
   
-    <section class = "QApopup" ng-show="$ctrl.show">
+    <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
-      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)"> {{ answer.answer }}
+      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)" > {{ answer.answer }}
       </p>
     </section>
 
@@ -47,7 +47,7 @@ const mainRoom = {
   </section>
   `,
 
-  controller: ["TriviaService", "$interval", function (TriviaService, $interval) {
+  controller: ["TriviaService", "$interval", "$timeout", function (TriviaService, $interval, $timeout) {
     const vm = this;
     let counter = 0;
 
@@ -71,7 +71,7 @@ const mainRoom = {
       vm.show = true;
       if (!correct) {
         console.log("wrong");
-
+        vm.incorrect = true;
       } else if (correct && counter < 5) {
         counter++;
         vm.show = false;
