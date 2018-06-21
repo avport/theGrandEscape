@@ -9,35 +9,35 @@ const mainRoom = {
     <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
       <p class="question" >{{$ctrl.qA.question}}</p>
       <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
-      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)" > {{ answer.answer }}
+      <input type = "radio" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
       </p>
     </section>
 
     <section class="main">
       <div>  
-        <img ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
+        <img ng-click="$ctrl.qPopup(3, 'growler')" src="./images/Growler.png" class="growler"> 
       </div>
       <div>  
         <img  src="./images/Globe.png" class="globe">  
-        <img ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
+        <img disableclick ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
       </div>
       <div>
       <img src="./images/DesktopClock.png" class="clock">
       </div>
       <div>
-        <img ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
+        <img ng-click="$ctrl.qPopup(1, 'bed')" src="./images/BedPillow.png" class="bed">
         <img src="./images/MermaidPainting.png" class="mermaid">
       </div>
       <div>
         <img src="./images/SailorHats.png" class="hats">
       </div>
       <div>
-        <img ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
+        <img ng-click="$ctrl.qPopup(4, 'dresser')" src="./images/LowDresser.png" class="dresser">
         <img ng-click = "" src="./images/Rug.png" class="rug">
       </div>
       <div></div>
       <div>
-        <img ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair animated">
+        <img ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair animated">
       </div>
     </section>
     <div> {{ $ctrl.countDown }}</div>
@@ -59,11 +59,12 @@ const mainRoom = {
     });
 
 
-    vm.qPopup = (index) => {
+    vm.qPopup = (index, className) => {
       console.log(index);
       console.log(vm.questions[index]);
       vm.show = true;
       vm.qA = vm.questions[index];
+      document.querySelector("." + className).removeAttribute("ng-click");
     }
 
     vm.guess = (correct) => {
@@ -72,6 +73,9 @@ const mainRoom = {
       if (!correct) {
         console.log("wrong");
         vm.incorrect = true;
+        $timeout( () => {
+          vm.incorrect = false;
+        }, 1000)
       } else if (correct && counter < 5) {
         counter++;
         vm.show = false;
@@ -121,3 +125,12 @@ const mainRoom = {
 }
 
 angular.module("app").component("mainRoom", mainRoom);
+angular.module("app").directive("disableclick", function() {
+  return {
+    restrict: 'A',
+    priority: 1000,    // setting higher priority to let this directive execute before ngClick
+    compile: function(element, attr) {
+      attr.ngClick = null;
+    }
+  }
+});
