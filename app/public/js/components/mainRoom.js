@@ -13,6 +13,9 @@ const mainRoom = {
       </p>
     </section>
 
+    <p class="correctAnswer" ng-show="$ctrl.showCorrect">Yay! Correct Answer!!</p>
+
+
     <section class="main">
       <div>  
         <img ng-click="$ctrl.qPopup(3, 'growler')" src="./images/Growler.png" class="growler"> 
@@ -89,6 +92,10 @@ const mainRoom = {
       } else if (correct && counter < 5) {
         counter++;
         vm.show = false;
+        vm.showCorrect = true;
+        // $timeout( ()=>{
+        //   vm.showCorrect = false;
+        // }, 1000);
         console.log(counter);
       }
 
