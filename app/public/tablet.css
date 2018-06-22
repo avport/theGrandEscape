@@ -37,7 +37,6 @@
       height: 96px;
       top: 388px;
       left: 96px;
-      position: absolute;
     }
 
   .chair {
@@ -45,7 +44,6 @@
       height: 111px;
       top: -293px;
       left: 782px;
-      position: absolute;
     }
 
   .clock {
@@ -53,7 +51,6 @@
       height: 51px;
       top: 181px;
       left: 617px;
-      position: absolute;
     }
 
   .globe {
@@ -61,7 +58,6 @@
       height: 95px;
       top: 217px;
       left: 495px;
-      position: absolute;
     }
 
   .growler {
@@ -69,7 +65,6 @@
       height: 71px;
       top: 93px;
       left: 246px;
-      position: absolute; 
     }
 
   .dresser {
@@ -77,7 +72,6 @@
       height: 178px;
       top: 292px;
       left: 378px;
-      position: absolute;
     }
 
   .mermaid {
@@ -85,7 +79,6 @@
       height: 124px;
       top: 287px;
       left: 1px;
-      position: absolute;
     }
 
   .octopus {
@@ -93,27 +86,27 @@
       height: 172px;
       top: -1px;
       left: 396px;
-      position: absolute;
     }
-
-  .rug {
-      display: none;
-    } 
 
   .hats {
       width: 47px;
       height: 33px;
       top: 332px;
       left: 291px;
-      position: absolute;
     }
   /*End of icon positioning */
 
 
-  /* Styling for timer bar 
+
   .timertext {
-    height: 300px;
-  }*/
+    font-size: 35px;
+  }
+
+  a{
+      font-size: 20px;
+      height: 35px;
+  }
+
 
 
 /* Question and Answer Popup */
@@ -128,30 +121,16 @@
   }
 
   .loser, .winner {
-    font-size: 2.75rem; 
-    border-radius: 10px; 
-    padding: 5px; 
-    height: 200px;
-    width: 460px;
-    text-align: center;
-    animation: spin 3s;
-    margin: 0 auto; 
-    margin-top: 50px; 
+    font-size: 3rem;
+    padding: 5px;
+    height: 225px;
+    padding: 20px;
+    width: 395px;
     }
 
-  .winner {
-    margin: 50px;
+    .winner {
+        margin: 95px;
     }
-
-  .winner p {
-    color: white;
-    }
-
-  .winner h1 {
-    color: white;
-    animation: blinker 1s linear infinite;
-    margin-top: 20px;
-  }
 
   .jail {
     background: url(./images/prisonbars.png) 600px 10px no-repeat;
