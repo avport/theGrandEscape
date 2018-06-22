@@ -123,7 +123,7 @@ const mainRoom = {
      }
       
     }
-  move();
+  // move();
    
     //Countdown timer that we might not need anymore
     //vm.countDown = 10;
