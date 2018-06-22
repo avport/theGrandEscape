@@ -41,14 +41,14 @@ let correct;
 
           //pushed incorrect answers into object in the answers array
           answers.push({
-            answer: a.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
+            answer: a.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/shy;/gi, ''),
             correct: false
           });
         }
 
         //push all correct answers into answer array
         answers.push({
-          answer: response.data.results[i].correct_answer.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
+          answer: response.data.results[i].correct_answer.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/shy;/gi, ''),
           correct: true
         });
 
@@ -57,7 +57,7 @@ let correct;
         
         //push all questions and answer array into one array
         questionsAndAnswers.push({
-          question: response.data.results[i].question.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, ''),
+          question: response.data.results[i].question.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'`').replace(/shy;/gi, ''),
           answers: answers
         });
       }
