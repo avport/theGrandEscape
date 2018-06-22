@@ -170,26 +170,26 @@
     
   /* question and answer popup */
     .QApopup {
+        min-height: 150px;
         width: 50%;
         margin: 0 auto;
         background-color:#923337;
+        color: lightgray;
+        letter-spacing: 2px;
         position: fixed; 
         z-index: 1;
-        padding: 1%; 
+        padding: 10px; 
         font-family: 'Cormorant Unicase', serif;
-        top: 5%;
+        top: 15%;
         left: 0;
         right: 0; 
         border-radius: .75rem; 
-  /* possibly delete */
-        display: flex;
-        flex-direction: column;
       }
     
     .question {
       font-size: 0.7rem; 
       line-height: 1.2; 
-      padding-bottom: 0.25rem;
+      padding-bottom: 10px;
       text-align: center;
       }
   
@@ -205,7 +205,8 @@
       font-family: 'Nova Square', cursive;
       font-size: 1.75rem; 
       border-radius: 10px; 
-      padding: 1%; 
+      color: lightgray;
+      padding: 10px; 
       height: 150px;
       width: 40%;
       text-align: center;
@@ -214,20 +215,16 @@
       margin-top: 50px; 
       }
 
-     
+    .loser {
+      height: 135px;
+    }
   
     .winner {
       margin: 50px;
       }
   
-    .winner p {
-      color: white;
-      }
-  
     .winner h1 {
-      color: white;
       animation: blinker 1s linear infinite;
-      margin-top: 20px;
     }
   
     .jail {
@@ -330,13 +327,22 @@
       background-color:#923337;
       font-family: 'Nova Square', cursive;
       font-size: 1rem; 
+      color: lightgray;
       border-radius: 10px; 
-      height: 200px;
+      height: 250px;
       width: 350px;
       padding: 15px;
-      margin-top: 50px; 
+      margin-top: 30px; 
       line-height: 25px;
       }
+
+    .rulesbutton {
+      transform: translate(80%, 20%);
+    }
+
+    li {
+      margin-top: 10px;
+    }
   
     ul {
       margin: 0 20px;
@@ -367,7 +373,7 @@
         font-family: 'Nova Square', cursive;
         text-align: center;
         text-transform: uppercase;
-        text-shadow: 0 0 80px #923337,0 0 30px FireBrick,0 0 6px DarkRed;
+        text-shadow: 0 0 200px #923337,0 0 30px FireBrick,0 0 6px DarkRed;
         color: #923337;
       }
 
@@ -429,9 +435,9 @@
         background-color: #2F2F2F;
         border-radius: 5px; 
         color: white;
-        height: 50px;
-        width: 80px; 
+        display: inline-block;
         text-decoration: none;
         font-size: 10px; 
         padding: 5px;
+        margin: 0 auto;
     }

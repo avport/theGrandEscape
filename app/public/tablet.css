@@ -179,96 +179,15 @@
     height: 634px;
     }
 
-/* styling for link buttons */
-a {
-    background-color: #2F2F2F;
-    border-radius: 5px; 
-    color: white;
-    height: 50px;
-    width: 80px; 
-    text-decoration: none;
-    font-size: 10px; 
-    padding: 5px;
-}
-
- /* animations for winner and loser pages */
- @keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
+    .rulesbutton {
+        transform: translate(138%, 55%);
     }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-
- /* Start animation for jail slide down */
-  @keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-    }
-    50%{
-        transform: translateY(8%);
-    }
-    65%{
-        transform: translateY(-4%);
-    }
-    80%{
-        transform: translateY(4%);
-    }
-    95%{
-        transform: translateY(-2%);
-    }           
-    100% {
-        transform: translateY(0%);
-    }       
-}
-    
-    @-webkit-keyframes slideDown {
-        0% {
-            -webkit-transform: translateY(-100%);
-        }
-        50%{
-            -webkit-transform: translateY(8%);
-        }
-        65%{
-            -webkit-transform: translateY(-4%);
-        }
-        80%{
-            -webkit-transform: translateY(4%);
-        }
-        95%{
-            -webkit-transform: translateY(-2%);
-        }           
-        100% {
-            -webkit-transform: translateY(0%);
-        }   
-    }
-    /* End animation for slide down */
 
     .rules {
-        margin: 0 auto;
-        background-color:#923337;
-        font-family: 'Nova Square', cursive;
-        font-size: 1rem; 
-        border-radius: 10px; 
-        height: 200px;
-        width: 350px;
-        padding: 15px;
-        margin-top: 50px; 
+        font-size: 20px;
+        height: 280px;
+        width: 500px;
+        margin-top: 100px;
         line-height: 25px;
         }
     
@@ -283,11 +202,8 @@ a {
         }
         
       .the {
-        color: white;
-        font-family: 'Nova Square', cursive;
-        font-weight: bolder;
-        font-size: 35px;
-        margin-right: 170px;
+        font-size: 70px;
+        margin-right: 495px;
         }
         
       body { 
@@ -297,63 +213,16 @@ a {
       .logo {
           padding: 40px;
           font-size: 150px;
-          font-family: 'Nova Square', cursive;
-          text-align: center;
-          text-transform: uppercase;
-          text-shadow: 0 0 80px #923337,0 0 30px FireBrick,0 0 6px DarkRed;
-          color: #923337;
-        }
+      }
   
       div p { 
          margin:0; 
       }
-  
-      #error:hover { 
-          text-shadow: 0 0 200px #ffffff,0 0 80px #636564,0 0 6px #0000ff; 
-      }
-  
-      #code:hover { 
-          text-shadow: 0 0 100px #923337,0 0 40px FireBrick,0 0 8px DarkRed; 
-      }
-  
-      #error {
-            color: #fff;
-            text-shadow: 0 0 80px #ffffff,0 0 30px #636564,0 0 6px #0000ff;
-      }
-  
-      #error span {
-          animation: upper 11s linear infinite;
-      }
-  
-      #code span:nth-of-type(2) {
-          animation: lower 10s linear infinite;
-      }
-  
-      #code span:nth-of-type(1) {
-          text-shadow: none;
-          opacity:.4;
-        }
-  
-      @keyframes upper {
-          0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
-          opacity:.99; text-shadow: 0 0 80px #ffffff,0 0 30px #636564,0 0 6px #0000ff;
-          }
-          20%,21.999%,63%,63.999%,65%,69.999% {
-          opacity:0.4; text-shadow: none; 
-          }
-        }
-        @keyframes lower {
-            0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
-            opacity:0.99; text-shadow: 0 0 80px #923337,0 0 30px FireBrick,0 0 6px DarkRed;
-            }
-            19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
-            opacity:0.4; text-shadow: none; 
-            }
-        }
-      
+
       a.clickToPlay {
-          background-color: #385F71;
-          margin: 0 auto; 
+        height: 50px;
+        font-size: 30px;
+        width: 235px;
       }
   /* End of CSS for Welcome Page Title */
 }
