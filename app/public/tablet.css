@@ -42,7 +42,7 @@
   .chair {
       width: 130px;
       height: 111px;
-      top: -293px;
+      top: 293px;
       left: 782px;
     }
 
@@ -159,7 +159,7 @@
     }
 
     .rulesbutton {
-        transform: translate(138%, 55%);
+        transform: translate(55%, 55%);
     }
 
     .rules {

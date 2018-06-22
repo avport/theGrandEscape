@@ -37,11 +37,21 @@ const mainRoom = {
       </div>
       <div></div>
       <div>
-        <img ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair animated">
+        <img ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair">
       </div>
     </section>
     <div> {{ $ctrl.countDown }}</div>
-    <div id="myProgress"><div class="timertext">Time is running out!!!!</div>
+    <div id="myProgress"><div class="timertext">
+    <p>H</p>
+    <p>U</p>
+    <p>R</p>
+    <p>R</p>
+    <p>Y</p>
+    <br></br>
+    <p>U</p>
+    <p>P</p>
+    <p>!</p>
+    </div>
       <div id="myBar"></div>
     </div>
   </section>
@@ -92,21 +102,21 @@ const mainRoom = {
    
    function move() {
      let elem = document.getElementById("myBar");
-     let width = 0;
+     let height = 100;
      let id = setInterval(frame, 100); //bigger the number the slower it moves
      function frame() {
-      if (width === 100) {
+      if (height === 0) {
         clearInterval(id);
         location.href = '#!/loser';
       } else {
-        width++;
-        elem.style.width = width + '%';
+        height--;
+        elem.style.height = height + '%';
         
       }
      }
       
     }
-  //move();
+  move();
    
     //Countdown timer that we might not need anymore
     //vm.countDown = 10;
