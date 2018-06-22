@@ -9,6 +9,7 @@ const welcome = {
             <p class="the">THE</p>
             <p id="error">G<span>r</span>and</p>
             <p id="code">Esc<span>ap</span><span>e</span></p>
+            <img id="lock" src= "./images/greylock.png">
             <a class="clickToPlay" href="#!/rules">Click to Play</a>
         </div>
       </section>

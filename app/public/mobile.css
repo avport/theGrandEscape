@@ -353,7 +353,33 @@
     
   
       /* Start of CSS for Welcome Page Title */
-    .tite {
+      .logo {
+        position: relative;
+        overflow: hidden;
+     }
+     
+     #lock {
+        position: absolute;
+        left: -300px;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: slide 0.5s forwards;
+        -webkit-animation-delay: 2s;
+        animation: slide 0.5s forwards;
+        margin-left: 75px;
+        margin-top: -100px;
+     }
+     
+     @-webkit-keyframes slide {
+        100% { left: 0; }
+     }
+     
+     @keyframes slide {
+        100% { left: 0; }
+     }
+    
+
+      .tite {
       position: relative;
       }
       
@@ -443,3 +469,5 @@
         padding: 5px;
         margin: 0 auto;
     }
+
+  

@@ -14,7 +14,6 @@
   img:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
-
   }
   
   @keyframes shake {
@@ -249,7 +248,7 @@
       }
 
       .rulesbutton {
-        transform: translate(45%, 40%);
+            transform: translate(45%, 40%);
       }
   
     ul {
