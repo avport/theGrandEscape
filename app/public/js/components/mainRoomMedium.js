@@ -1,5 +1,5 @@
 "use strict";
-const mainRoom = {
+const medium = {
   template: `
 
   <section class="background"> 
@@ -18,29 +18,29 @@ const mainRoom = {
 
     <section class="main">
       <div>  
-        <img remove-click ng-click="$ctrl.qPopup(3, 'growler')" src="./images/Growler.png" class="growler"> 
+        <img ng-click="$ctrl.qPopup(3, 'growler')" src="./images/Growler.png" class="growler"> 
       </div>
       <div>  
         <img  src="./images/Globe.png" class="globe">  
-        <img remove-click ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
+        <img ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
       </div>
       <div>
       <img src="./images/DesktopClock.png" class="clock">
       </div>
       <div>
-        <img remove-click ng-click="$ctrl.qPopup(1, 'bed')" src="./images/BedPillow.png" class="bed">
+        <img ng-click="$ctrl.qPopup(1, 'bed')" src="./images/BedPillow.png" class="bed">
         <img src="./images/MermaidPainting.png" class="mermaid">
       </div>
       <div>
         <img src="./images/SailorHats.png" class="hats">
       </div>
       <div>
-        <img remove-click ng-click="$ctrl.qPopup(4, 'dresser')" src="./images/LowDresser.png" class="dresser">
+        <img ng-click="$ctrl.qPopup(4, 'dresser')" src="./images/LowDresser.png" class="dresser">
         <img ng-click = "" src="./images/Rug.png" class="rug">
       </div>
       <div></div>
       <div>
-        <img remove-click ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair">
+        <img ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair">
       </div>
     </section>
     <div> {{ $ctrl.countDown }}</div>
@@ -65,7 +65,7 @@ const mainRoom = {
     let counter = 0;
 
 
-    TriviaService.getQuestions().then((response) => {
+    TriviaService.getMediumQuestions().then((response) => {
       console.log(response);
       vm.questions = response;
       return response
@@ -93,9 +93,9 @@ const mainRoom = {
         counter++;
         vm.show = false;
         vm.showCorrect = true;
-        $timeout( ()=>{
-        vm.showCorrect = false;
-        }, 1000);
+        // $timeout( ()=>{
+        //   vm.showCorrect = false;
+        // }, 1000);
         console.log(counter);
       }
 
@@ -141,7 +141,7 @@ const mainRoom = {
   
 }
 
-angular.module("app").component("mainRoom", mainRoom);
+angular.module("app").component("medium", medium);
 angular.module("app").directive("disableclick", function() {
   return {
     restrict: 'A',

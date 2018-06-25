@@ -18,6 +18,9 @@ angular.module("app", ["ngRoute"])
   .when("/rules", {
     template: `<rules></rules>`
   })
+  .when("/medium", {
+    template: `<medium></medium>`
+  })
   .otherwise ({
     redirectTo: "/welcome"
   })
