@@ -7,13 +7,10 @@ const rules = {
       <li>Correctly answer 5 questions in the time allowed to ESCAPE!</li>
       <li>Fail to answer all 5 correctly and you must stay here forever.</li>
     </ul>
-    <div class="dropdown">
-      <a class="rulesbutton" href="#!/mainroom">ENTER at your own risk</a>
-      <div class="dropdown-content">
-        <a href="#!/mainroom">Easy</a>
-        <a href="#!/medium">Medium</a>
-        <a href="#!/hard">Hard</a>
-      </div>
+    <div class="levels">
+      <a class="rulesbutton" href="#!/mainroom">Easy</a>
+      <a class="rulesbutton" href="#!/medium">Medium</a>
+      <a class="rulesbutton" href="#!/hard">Hard</a>
     </div>
   </section>
   `,

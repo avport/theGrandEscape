@@ -166,7 +166,10 @@
     }
 
     .rulesbutton {
-        transform: translate(55%, 55%);
+        height: 41px;
+        width: 95px;
+        margin-top: 26px;
+        font-size: 19px;
     }
 
     .rules {

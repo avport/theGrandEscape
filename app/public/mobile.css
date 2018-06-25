@@ -400,7 +400,12 @@
       }
 
     .rulesbutton {
-      transform: translate(80%, 20%);
+        padding: 5px;
+        height: 30px;
+        width: 64px;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 13px;
     }
 
     li {
@@ -531,5 +536,11 @@
         padding: 5px;
         margin: 0 auto;
     }
+
+    .levels {
+        display: flex;
+    }
+
+    
 
   
