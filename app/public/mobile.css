@@ -426,6 +426,7 @@
         height: 100px;
         -webkit-animation: slide 0.5s forwards;
         -webkit-animation-delay: 2s;
+        animation-delay: 2s;
         animation: slide 0.5s forwards;
         margin-left: 75px;
         margin-top: -100px;
