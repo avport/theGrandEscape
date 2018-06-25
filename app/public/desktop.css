@@ -1,12 +1,12 @@
 /* 1440 x 750 */
-@media only screen and (max-width: 2000px) and (min-width: 1200px) and (orientation: landscape) {
+@media only screen and (max-width: 2000px) and (min-width: 1025px) and (orientation: landscape) {
   .background {
       background: url(./images/mainroom.jpg) no-repeat center center fixed; 
       background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
       height: 750px;
-      width: 1440px;
+      width: 1310px;
       position: fixed;
   }   
 
@@ -31,74 +31,75 @@
   }
 
   .bed {
-    width: 218px;
+    width: 220px;
     height: 132px;
-    top: 476px;
-    left: 90px;
+    top: 491px;
+    left: 94px;
   }
   
   .chair {
-    width: 190px;
-    height: 151px;
-    top: 364px;
-    left: 962px;
+    width: 172px;
+    height: 143px;
+    top: 374px;
+    left: 998px;
   }
 
   .clock {
-    width: 147px;
+    width: 138px;
     height: 70px;
-    top: 223px;
-    left: 765px;
+    top: 230px;
+    left: 784px;
   }
 
   .globe {
     width: 119px;
     height: 138px;
     top: 270px;
-    left: 607px;
+    left: 616px;
   }
 
   .growler {
-    width: 54px;
+    width: 52px;
     height: 99px;
-    top: 113px;
-    left: 304px;
+    top: 116px;
+    left: 314px;
   }
 
   .dresser {
-    width: 220px;
+    width: 227px;
     height: 224px;
-    top: 361px;
-    left: 479px;
+    top: 370px;
+    left: 487px;
   }
 
   .mermaid {
     width: 152px;
-    height: 172px;
-    top: 352px;
+    height: 176px;
+    top: 360px;
     left: 1px;
   }
 
   .octopus {
-    width: 196px;
-    height: 214px;
+    width: 200px;
+    height: 219px;
     top: 1px;
-    left: 495px;
+    left: 507px;
   }
 
 
   .hats {
     width: 60px;
     height: 47px;
-    top: 411px;
-    left: 363px;
+    top: 422px;
+    left: 370px;
   }
 
   /* end icon positioning */
   
 /* Styling for timer bar */
 .timertext {
-  font-size: 50px;
+  font-size: 30px;
+  margin-top: 325px;
 }
 
 
