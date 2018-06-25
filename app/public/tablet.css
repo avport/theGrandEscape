@@ -110,6 +110,15 @@
 
 
 /* Question and Answer Popup */
+  .correctAnswer  {
+    padding: 18px; 
+    font-size: 29px;
+    height: 140px;
+    width: 223px;
+  }
+
+
+
   .question {
     font-size: 1.1rem; 
     line-height: 1.5; 

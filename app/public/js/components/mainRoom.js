@@ -99,7 +99,6 @@ const mainRoom = {
       }
 
       if (counter === 5) {
-        //console.log("winner");
         //redirects to winner page after 5 correct answers
         location.href = '#!/winner';
       }
@@ -124,7 +123,10 @@ const mainRoom = {
     }
   // move();
    
+
+  
     //Countdown timer that we might not need anymore
+
     //vm.countDown = 10;
     // $interval(function () {
     //   if (vm.countDown !== 0){
