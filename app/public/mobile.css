@@ -25,6 +25,18 @@
         top: 216px;
         left: 49px;
         position: absolute;
+      
+      
+      /*Transition animation*/
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      
+  
+      /*Reflection animation*/
+      -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1)));
+      }
   
 /* icon shake in mainroom */  
     img:hover {
