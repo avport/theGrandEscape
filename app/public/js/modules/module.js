@@ -21,6 +21,9 @@ angular.module("app", ["ngRoute"])
   .when("/medium", {
     template: `<medium></medium>`
   })
+  .when("/hard", {
+    template: `<hard></hard>`
+  })
   .otherwise ({
     redirectTo: "/welcome"
   })

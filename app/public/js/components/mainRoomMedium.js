@@ -18,29 +18,29 @@ const medium = {
 
     <section class="main">
       <div>  
-        <img ng-click="$ctrl.qPopup(3, 'growler')" src="./images/Growler.png" class="growler"> 
+        <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
       </div>
       <div>  
         <img  src="./images/Globe.png" class="globe">  
-        <img ng-click="$ctrl.qPopup(0, 'octopus')" src="./images/OctopusPainting.png" class="octopus">
+        <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
       </div>
       <div>
       <img src="./images/DesktopClock.png" class="clock">
       </div>
       <div>
-        <img ng-click="$ctrl.qPopup(1, 'bed')" src="./images/BedPillow.png" class="bed">
+        <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
         <img src="./images/MermaidPainting.png" class="mermaid">
       </div>
       <div>
         <img src="./images/SailorHats.png" class="hats">
       </div>
       <div>
-        <img ng-click="$ctrl.qPopup(4, 'dresser')" src="./images/LowDresser.png" class="dresser">
+        <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
         <img ng-click = "" src="./images/Rug.png" class="rug">
       </div>
       <div></div>
       <div>
-        <img ng-click="$ctrl.qPopup(2, 'chair')" src="./images/ChairPillow.png" class="chair">
+        <img remove-click ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
       </div>
     </section>
     <div> {{ $ctrl.countDown }}</div>
@@ -72,12 +72,11 @@ const medium = {
     });
 
 
-    vm.qPopup = (index, className) => {
+    vm.qPopup = (index) => {
       console.log(index);
       console.log(vm.questions[index]);
       vm.show = true;
       vm.qA = vm.questions[index];
-      // document.querySelector("." + className).removeAttribute("ng-click");
     }
 
     vm.guess = (correct) => {
@@ -93,9 +92,9 @@ const medium = {
         counter++;
         vm.show = false;
         vm.showCorrect = true;
-        // $timeout( ()=>{
-        //   vm.showCorrect = false;
-        // }, 1000);
+         $timeout( ()=>{
+           vm.showCorrect = false;
+         }, 1000);
         console.log(counter);
       }
 
@@ -142,12 +141,3 @@ const medium = {
 }
 
 angular.module("app").component("medium", medium);
-angular.module("app").directive("disableclick", function() {
-  return {
-    restrict: 'A',
-    priority: 1000,    // setting higher priority to let this directive execute before ngClick
-    compile: function(element, attr) {
-      attr.ngClick = null;
-    }
-  }
-});

@@ -1,5 +1,5 @@
 "use strict";
-const mainRoom = {
+const hard = {
   template: `
 
   <section class="background"> 
@@ -65,7 +65,7 @@ const mainRoom = {
     let counter = 0;
 
 
-    TriviaService.getQuestions().then((response) => {
+    TriviaService.getHardQuestions().then((response) => {
       console.log(response);
       vm.questions = response;
       return response
@@ -92,9 +92,9 @@ const mainRoom = {
         counter++;
         vm.show = false;
         vm.showCorrect = true;
-        $timeout( ()=>{
-        vm.showCorrect = false;
-        }, 1000);
+         $timeout( ()=>{
+           vm.showCorrect = false;
+         }, 1000);
         console.log(counter);
       }
 
@@ -140,4 +140,4 @@ const mainRoom = {
   
 }
 
-angular.module("app").component("mainRoom", mainRoom);
+angular.module("app").component("hard", hard);
