@@ -9,12 +9,7 @@ const winner = {
     </section>
     <img class="balloons" src= "./images/balloons.png">
   </section>
-
-
-
   `,
-
-  
 }
 
 angular.module("app").component("winner", winner);
