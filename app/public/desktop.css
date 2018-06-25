@@ -133,7 +133,12 @@
     .winner p {
       color: white;
       }
-  
+    .balloons {
+      margin-left: 1039px;
+      margin-top: -161px;
+      width: 327px;
+      pointer-events: none;
+      }
     .winner h1 {
       color: white;
       animation: blinker 1s linear infinite;
