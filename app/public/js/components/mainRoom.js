@@ -14,7 +14,7 @@ const mainRoom = {
     </section>
 
     <p class="correctAnswer" ng-show="$ctrl.showCorrect">Yay! Correct Answer!!</p>
-    
+  
 
     <section class="main">
       <div>  
@@ -88,7 +88,7 @@ const mainRoom = {
         $timeout( () => {
           vm.incorrect = false;
         }, 1000)
-        audio.play();
+       
       } else if (correct && counter < 5) {
         counter++;
         vm.show = false;
@@ -96,6 +96,7 @@ const mainRoom = {
         $timeout( ()=>{
         vm.showCorrect = false;
         }, 1000);
+        audio.play();
         console.log(counter);
       }
 
@@ -141,9 +142,11 @@ const mainRoom = {
 
 
     function play(){
-      var audio = document.getElementById("audio");
+      let audio = document.getElementsByClassName("audio");
       audio.play();
                 }
+
+   
      
   }]
   
