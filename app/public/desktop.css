@@ -5,8 +5,8 @@
       background-position: center top;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 750px;
       width: 1310px;
+      height: 750px;
       position: fixed;
   }   
 
@@ -298,6 +298,13 @@
             text-shadow: 0 0 80px #923337,0 0 30px FireBrick,0 0 6px DarkRed;
             color: #923337;
           }
+
+        #lock {
+          margin-top: -265px;
+          width: 250px;
+          height: 250px;
+
+        }
     
         div p { 
            margin:0; 
