@@ -3,7 +3,7 @@ const mainRoom = {
   template: `
 
   <section class="main"> 
-    <section>
+    <section class="background">
       <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
         <p class="question" >{{$ctrl.qA.question}}</p>
         <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">

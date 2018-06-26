@@ -110,7 +110,7 @@ body {
         width: 84px;
         height: 84px;
         top: 135px;
-        left: 240px;    
+        left: 236px;    
         position: absolute;
     }
   
@@ -126,7 +126,7 @@ body {
         width: 76px;
         height: 82px;
         top: -1px;
-        left: 246px;
+        left: 244px;
         position: absolute;
     }
   
