@@ -2,61 +2,61 @@
 const mainRoom = {
   template: `
 
-  <section class="background"> 
- 
-  
-  
-    <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
-      <p class="question" >{{$ctrl.qA.question}}</p>
-      <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
-      <input type = "radio" name = "answer" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
-      </p>
-    </section>
+  <section class="main"> 
+    <section>
+      <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
+        <p class="question" >{{$ctrl.qA.question}}</p>
+        <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
+        <input type = "radio" name = "answer" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
+        </p>
+      </section>
 
     <p class="correctAnswer" ng-show="$ctrl.showCorrect">Yay! Correct Answer!!</p>
-  
 
-    <section class="main">
-      <div>  
-        <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
-      </div>
-      <div>  
-        <img  src="./images/Globe.png" class="globe">  
-        <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
-      </div>
-      <div>
-      <img src="./images/DesktopClock.png" class="clock">
-      </div>
-      <div>
-        <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
-        <img src="./images/MermaidPainting.png" class="mermaid">
-      </div>
-      <div>
-        <img src="./images/SailorHats.png" class="hats">
-      </div>
-      <div>
-        <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
-        <img ng-click = "" src="./images/Rug.png" class="rug">
-      </div>
-      <div></div>
-      <div>
-        <img remove-click ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
-      </div>
-    </section>
+    <div>  
+      <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/Growler.png" class="growler"> 
+    </div>
+    <div>  
+      <img  src="./images/Globe.png" class="globe">  
+      <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/OctopusPainting.png" class="octopus">
+    </div>
+    <div>
+    <img src="./images/DesktopClock.png" class="clock">
+    </div>
+    <div>
+      <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/BedPillow.png" class="bed">
+      <img src="./images/MermaidPainting.png" class="mermaid">
+    </div>
+    <div>
+      <img src="./images/SailorHats.png" class="hats">
+    </div>
+    <div>
+      <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/LowDresser.png" class="dresser">
+      <img ng-click = "" src="./images/Rug.png" class="rug">
+    </div>
+    <div></div>
+    <div>
+      <img remove-click ng-click="$ctrl.qPopup(2)" src="./images/ChairPillow.png" class="chair">
+    </div>
+  
     <div> {{ $ctrl.countDown }}</div>
+    
     <div id="myProgress"><div class="timertext">
-    <p>H</p>
-    <p>U</p>
-    <p>R</p>
-    <p>R</p>
-    <p>Y</p>
-    <br></br>
-    <p>U</p>
-    <p>P</p>
-    <p>!</p>
+      <p>H</p>
+      <p>U</p>
+      <p>R</p>
+      <p>R</p>
+      <p>Y</p>
+      <br></br>
+      <p>U</p>
+      <p>P</p>
+      <p>!</p>
     </div>
-      <div id="myBar"></div>
-    </div>
+  
+    <div id="myBar"></div>
+  
+    </section>
+ 
   </section>
   `,
 
