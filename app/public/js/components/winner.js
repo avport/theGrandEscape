@@ -5,7 +5,7 @@ const winner = {
     <section class="winner">
         <h1>Congrats</h1>
         <p> You're Free!</p>
-        <a href="#!/welcome">Play Again - if you dare!</a>
+        <a class="playAgain" href="#!/welcome">Play Again - if you dare!</a>
     </section>
     <img class="balloons" src= "./images/balloons.png">
   </section>

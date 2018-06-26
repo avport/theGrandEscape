@@ -126,7 +126,6 @@
       border-radius: 10px; 
       padding: 5px; 
       height: 275px;
-      width: 672px;
       text-align: center;
       animation: spin 3s;
       margin: 0 auto; 
@@ -140,8 +139,13 @@
     .winner p {
       color: white;
       }
+
+    .playAgain {
+      width: 400px;
+    }
+
     .balloons {
-      margin-left: 1039px;
+      margin-left: 975px;
       margin-top: -161px;
       width: 327px;
       pointer-events: none;
