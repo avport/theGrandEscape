@@ -17,22 +17,22 @@ const mainRoom = {
         <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/growler.png" class="growler"> 
       </div>
       <div>  
-        <img  src="./images/globe.png" class="globe">  
+        <img  onclick="sadtrombone.play()" src="./images/globe.png" class="globe">  
         <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/octopuspainting.png" class="octopus">
       </div>
       <div>
-      <img src="./images/desktopclock.png" class="clock">
+      <img onclick="sadtrombone.play()" src="./images/desktopclock.png" class="clock">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/bedpillow.png" class="bed">
-        <img src="./images/mermaidpainting.png" class="mermaid">
+        <img onclick="sadtrombone.play()" src="./images/mermaidpainting.png" class="mermaid">
       </div>
       <div>
-        <img src="./images/sailorhats.png" class="hats">
+        <img onclick="sadtrombone.play()" src="./images/sailorhats.png" class="hats">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/lowdresser.png" class="dresser">
-        <img ng-click = "" src="./images/rug.png" class="rug">
+        <img onclick="sadtrombone.play()" ng-click = "" src="./images/rug.png" class="rug">
       </div>
       <div></div>
       <div>
@@ -66,6 +66,7 @@ const mainRoom = {
     let counter = 0;
 
 
+
     TriviaService.getQuestions().then((response) => {
       console.log(response);
       vm.questions = response;
@@ -89,7 +90,8 @@ const mainRoom = {
         $timeout( () => {
           vm.incorrect = false;
         }, 1000)
-       
+        rename.play();
+ 
       } else if (correct && counter < 5) {
         counter++;
         vm.show = false;
@@ -97,7 +99,7 @@ const mainRoom = {
         $timeout( ()=>{
         vm.showCorrect = false;
         }, 1000);
-        audio.play();
+        happykids.play();
         console.log(counter);
       }
 
@@ -143,14 +145,25 @@ const mainRoom = {
 
 
     function play(){
-      let audio = document.getElementsByClassName("audio");
-      audio.play();
+      let rename = document.getElementById("rename");
+      // rename.play();
                 }
 
-   
+    function happy(){
+      let happykids = document.getElementById("happykids");
+      // happykids.happy();
+                }
+
+    function sad () {
+      let sadtrombone = document.getElementById("sadtrombone");
+      console.log("sad"); 
+      // sadtrombone.sad(); 
+                }
      
   }]
   
 }
 
 angular.module("app").component("mainRoom", mainRoom);
+
+
