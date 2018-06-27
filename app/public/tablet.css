@@ -202,32 +202,26 @@
       height: 170px;
     }
     
-    .tite {
-        position: relative;
-        }
         
-      .the {
-        font-size: 70px;
-        margin-right: 495px;
-        }
+  .the {
+    font-size: 70px;
+    margin-right: 495px;
+  }
         
-      body { 
-          background-color:#2B4162; 
-      }
   
-      .logo {
-          padding: 40px;
-          font-size: 150px;
-      }
+  .logo {
+    padding: 40px;
+    font-size: 150px;
+  }
   
-      div p { 
-         margin:0; 
-      }
+  div p { 
+    margin:0; 
+  }
 
-      a.clickToPlay {
-        height: 50px;
-        font-size: 30px;
-        width: 235px;
-      }
+  a.clickToPlay {
+    height: 50px;
+    font-size: 30px;
+    width: 235px;
+  }
   /* End of CSS for Welcome Page Title */
 }
