@@ -37,9 +37,7 @@ const hard = {
       <div>
         <img remove-click ng-click="$ctrl.qPopup(2)" src="./images/chairpillow.png" class="chair">
       </div>
-    </section>
 
-    <section class="timer">
       <div> {{ $ctrl.countDown }}</div>
     
       <div id="myProgress"><div class="timertext">

@@ -13,14 +13,14 @@ body {
         background: url(./images/mainroom.jpg) no-repeat center;
         background-repeat: no-repeat;
         background-size: auto auto;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 568px;
-    height: 320px;
-    position: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 568px;
+        height: 320px;
+        position: relative;
     }
 
     /* Styling for timer bar */
@@ -564,7 +564,7 @@ body {
 
 #box {
     animation: fontbulger 3s infinite;
-
+}
     .bed {
         width: 143px;
         height: 96px;
