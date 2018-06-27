@@ -653,10 +653,10 @@ body {
     .jail {
         background: url(./images/prisonbars.png) 600px 10px no-repeat;
         background-position: center top;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         position: fixed;
         width: 1024px;
         height: 768px;
@@ -669,7 +669,7 @@ body {
         background-size: cover;
         position: fixed;
         width: 1024px;
-        height: 634px;
+        height: 768px;
     }
     
     .rulesbutton {
