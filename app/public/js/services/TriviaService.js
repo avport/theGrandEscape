@@ -7,6 +7,7 @@ let correct;
       url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple',
       method: 'GET'
     }).then((response) => {
+      console.log(response);
       //create an empty array to push our questions and answers into
       const questionsAndAnswers = [];
 
@@ -105,14 +106,14 @@ let correct;
 
           //pushed incorrect answers into object in the answers array
           answers.push({
-            answer: a.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+            answer: a.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
             correct: false
           });
         }
 
         //push all correct answers into answer array
         answers.push({
-          answer: response.data.results[i].correct_answer.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+          answer: response.data.results[i].correct_answer.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
           correct: true
         });
 
@@ -121,7 +122,7 @@ let correct;
         
         //push all questions and answer array into one array
         questionsAndAnswers.push({
-          question: response.data.results[i].question.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+          question: response.data.results[i].question.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
           answers: answers
         });
       }
@@ -169,14 +170,14 @@ let correct;
 
           //pushed incorrect answers into object in the answers array
           answers.push({
-            answer: a.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+            answer: a.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
             correct: false
           });
         }
 
         //push all correct answers into answer array
         answers.push({
-          answer: response.data.results[i].correct_answer.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+          answer: response.data.results[i].correct_answer.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
           correct: true
         });
 
@@ -185,7 +186,7 @@ let correct;
         
         //push all questions and answer array into one array
         questionsAndAnswers.push({
-          question: response.data.results[i].question.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&"),
+          question: response.data.results[i].question.replace(/&quot;/gi, '"').replace(/&#039;/gi, "'").replace(/&/gi, '').replace(/acute;/gi,'').replace(/shy;/gi, '').replace(/ldquo;/gi,'"').replace(/rsquo;/gi,"'").replace(/hellip;rdquo;/gi,"...").replace(/amp;/gi, "&").replace(/uml;/gi, "").replace(/ing;/gi, ""),
           answers: answers
         });
       }
