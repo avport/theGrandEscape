@@ -37,9 +37,7 @@ const mainRoom = {
       <div>
         <img remove-click ng-click="$ctrl.qPopup(2)" src="./images/chairpillow.png" class="chair">
       </div>
-    </section>
 
-    <section class="timer">
       <div> {{ $ctrl.countDown }}</div>
     
       <div id="myProgress"><div class="timertext">
@@ -115,7 +113,7 @@ const mainRoom = {
       
     }
 
-    move();
+    // move();
    
     function play(){
       let rename = document.getElementById("rename");

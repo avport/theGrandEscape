@@ -9,12 +9,12 @@ body {
 }
 
 .main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+    /* width: 100%;
+    height: 100vh; */
+    /* display: flex; */
 }
 
-@media only screen and (min-width: 360px) and (orientation: landscape) {
+@media only screen and (min-width: 320px) and (orientation: landscape) {
     .background {
         background: url(./images/mainroom.jpg) no-repeat center center fixed; 
         -webkit-background-size: contain;
@@ -22,7 +22,7 @@ body {
         -o-background-size: contain;
         background-size: contain;
         background-repeat: no-repeat;
-        width: 600px;
+        width: 568px;
         height: 320px;
         position: relative;
     }
