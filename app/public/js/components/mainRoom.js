@@ -60,7 +60,7 @@ const mainRoom = {
   </section>
   `,
 
-  controller: ["TriviaService", "$timeout", function (TriviaService, $timeout) {
+  controller: ["TriviaService", "$timeout", "$interval", function (TriviaService, $timeout, $interval) {
     const vm = this;
     let counter = 0;
 
@@ -102,7 +102,7 @@ const mainRoom = {
    function move() {
      let elem = document.getElementById("myBar");
      let height = 100;
-     let id = setInterval(frame, 900); //bigger the number the slower it moves
+     let id = setInterval(frame, 100); //bigger the number the slower it moves
      function frame() {
       if (height === 0) {
         clearInterval(id);
