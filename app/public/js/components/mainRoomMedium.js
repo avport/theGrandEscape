@@ -16,22 +16,22 @@ const medium = {
         <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/growler.png" class="growler"> 
       </div>
       <div>  
-        <img  onclick="sadtrombone.play()" src="./images/globe.png" class="globe">  
+        <img   src="./images/globe.png" class="globe">  
         <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/octopuspainting.png" class="octopus">
       </div>
       <div>
-      <img onclick="sadtrombone.play()" src="./images/desktopclock.png" class="clock">
+      <img  src="./images/desktopclock.png" class="clock">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/bedpillow.png" class="bed">
-        <img onclick="sadtrombone.play()" src="./images/mermaidpainting.png" class="mermaid">
+        <img  src="./images/mermaidpainting.png" class="mermaid">
       </div>
       <div>
-        <img onclick="sadtrombone.play()" src="./images/sailorhats.png" class="hats">
+        <img  src="./images/sailorhats.png" class="hats">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/lowdresser.png" class="dresser">
-        <img onclick="sadtrombone.play()" ng-click = "" src="./images/rug.png" class="rug">
+        <img  ng-click = "" src="./images/rug.png" class="rug">
       </div>
       <div></div>
       <div>
@@ -79,7 +79,7 @@ const medium = {
         $timeout( () => {
           vm.incorrect = false;
         }, 1000)
-        rename.play();
+        rename.play(); 
  
       } else if (correct && counter < 5) {
         counter++;
@@ -88,23 +88,25 @@ const medium = {
         $timeout( ()=>{
         vm.showCorrect = false;
         }, 1000);
-        happykids.play();
+
       }
 
       if (counter === 5) {
         //redirects to winner page after 5 correct answers
         location.href = '#!/winner';
+        happykids.play();
       }
     }
 
    function move() {
      let elem = document.getElementById("myBar");
      let height = 100;
-     let id = setInterval(frame, 900); //bigger the number the slower it moves
+     let id = setInterval(frame, 100); //bigger the number the slower it moves
      function frame() {
       if (height === 0) {
         clearInterval(id);
         location.href = '#!/loser';
+        sadtrombone.play(); 
       } else {
         height--;
         elem.style.height = height + '%'; 
