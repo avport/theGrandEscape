@@ -73,13 +73,31 @@ body {
         position: absolute;
     }
 
-    /* icon shake in mainroom */  
+    /* icon shake in mainroom */ 
+
     img:hover {
         animation: shake 0.5s;
         animation-iteration-count: infinite;
         cursor: help;
     }
 
+     /* font size change animation */
+     @keyframes fontbulger {
+        0% {
+          font-size: 10px;
+        }
+        30% {
+          font-size: 15px;
+        }
+        100% {
+          font-size: 12px;
+        }
+      }
+      
+      #box {
+         animation: fontbulger 7s infinite;
+      }
+      
     .chair {
         width: 70px;
         height: 51px;

@@ -4,7 +4,7 @@ const mainRoom = {
   <section class="main"> 
     <section class="background">
       <section class = "QApopup" ng-show="$ctrl.show" ng-class="$ctrl.incorrect ? 'incorrect' : 'incorrect-disabled'">
-        <p class="question" >{{$ctrl.qA.question}}</p>
+        <p id = "box" class="question" >{{$ctrl.qA.question}}</p>
         <p class = "answer" ng-repeat = "answer in $ctrl.qA.answers">
         <input type = "radio" name = "answer" ng-click = "$ctrl.guess(answer.correct)" ng-disabled=""> {{ answer.answer }}
         </p>
