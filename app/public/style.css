@@ -8,7 +8,42 @@ body {
     background-color: #2B4162;
 }
 
+.landscape {
+    height: 100vh;
+    color: white;
+    background-color:#923337;
+    font-family: 'Nova Square', cursive;
+    font-size: 1rem; 
+    color: lightgray;
+}
+.landscape p {
+    padding: 15px 60px;
+
+}
+.rotate {
+    font-size: 200px;
+    margin: 15px 60px;
+}
+
+img, .title {
+    display: none;
+}
+
+
 @media only screen and (min-width: 320px) and (orientation: landscape) {
+
+    .title {
+        display: block;
+    }
+
+    img {
+        display: block;
+    }
+
+    .landscape {
+        display: none;
+    }
+
     .background {
         background: url(./images/mainroom.jpg) no-repeat center;
         background-repeat: no-repeat;
@@ -216,6 +251,13 @@ body {
         line-height: 1.2; 
         padding-bottom: 10px;
         text-align: center;
+        animation: fade 5s infinite 1400ms;
+
+    }        
+    @keyframes fade{
+        50% {
+            opacity: 0.02;
+        }
     }
     
     .answer {
@@ -557,16 +599,6 @@ body {
         font-size: 17px;
         }
     } */
-
-.question {
-    animation: fade 5s infinite 1400ms;
-}
-
-    @keyframes fade{
-        50% {
-            opacity: 0.02;
-        }
-    }
 
     .bed {
         width: 143px;

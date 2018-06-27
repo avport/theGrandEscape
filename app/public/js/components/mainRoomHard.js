@@ -10,7 +10,7 @@ const hard = {
         </p>
       </section>
 
-      <p class="correctAnswer" ng-show="$ctrl.showCorrect">Yay! Correct Answer!!</p>
+      <p class="correctAnswer" ng-show="$ctrl.showCorrect">Correct!</p>
 
       <div>  
         <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/growler.png" class="growler"> 
@@ -101,7 +101,7 @@ const hard = {
    function move() {
      let elem = document.getElementById("myBar");
      let height = 100;
-     let id = setInterval(frame, 100); //bigger the number the slower it moves
+     let id = setInterval(frame, 1200); //bigger the number the slower it moves
      function frame() {
       if (height === 0) {
         clearInterval(id);
