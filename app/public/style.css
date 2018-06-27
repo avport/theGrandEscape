@@ -194,7 +194,7 @@ body {
 
     .correctAnswer {
         margin: 0 auto;
-        background-color:#923337;
+        background-color:#708238;
         color: lightgray;
         letter-spacing: 2px;
         position: fixed; 
@@ -429,10 +429,6 @@ body {
         100% { left: 0; }
     }
 
-    .tite {
-        position: relative;
-    }
-
     .the {
         color: white;
         font-family: 'Nova Square', cursive;
@@ -544,7 +540,7 @@ body {
 /* Image Positioning and Animation */
 
     /* font size change animation */
-    @keyframes fontbulger {
+    /* @keyframes fontbulger {
         0% {
         font-size: 17px;
         }
@@ -560,11 +556,18 @@ body {
         100% {
         font-size: 17px;
         }
+    } */
+
+.question {
+    animation: fade 5s infinite 1400ms;
+}
+
+    @keyframes fade{
+        50% {
+            opacity: 0.02;
+        }
     }
 
-#box {
-    animation: fontbulger 3s infinite;
-}
     .bed {
         width: 143px;
         height: 96px;
