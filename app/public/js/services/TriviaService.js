@@ -7,7 +7,6 @@ let correct;
       url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple',
       method: 'GET'
     }).then((response) => {
-      console.log(response);
       //create an empty array to push our questions and answers into
       const questionsAndAnswers = [];
 
@@ -33,7 +32,6 @@ let correct;
             answers[currentIndex] = answers[randomIndex];
             answers[randomIndex] = temporaryValue;
           }
-          console.log(answers);
           return answers;
         }
 
@@ -67,6 +65,7 @@ let correct;
       console.log(error);
     });
   }
+
   const getMediumQuestions = () => {
     return $http ({
       url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=medium&type=multiple',
@@ -97,7 +96,6 @@ let correct;
             answers[currentIndex] = answers[randomIndex];
             answers[randomIndex] = temporaryValue;
           }
-          console.log(answers);
           return answers;
         }
 
@@ -131,6 +129,7 @@ let correct;
       console.log(error);
     });
   }
+  
   const getHardQuestions = () => {
     return $http ({
       url: 'https://opentdb.com/api.php?amount=5&category=9&difficulty=hard&type=multiple',
@@ -161,7 +160,6 @@ let correct;
             answers[currentIndex] = answers[randomIndex];
             answers[randomIndex] = temporaryValue;
           }
-          console.log(answers);
           return answers;
         }
 

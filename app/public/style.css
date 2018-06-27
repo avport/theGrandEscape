@@ -71,15 +71,6 @@ body {
         top: 179px;
         left: 99px;
         position: absolute;
-        /*PROBABLY NEED TO DELETE THESE. I THINK THIS COULD BE THE PROBLEM*/
-        /*Transition animation*/
-        /* -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease; */
-    
-        /*Reflection animation*/
-        /* -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.1))); */
     }
 
     /* icon shake in mainroom */  
@@ -241,8 +232,7 @@ body {
     .winner h1 {
         animation: blinker 1s linear infinite;
     }
-
-    
+   
     .balloons {
         transform: translatey(0px);
         animation: float 4s ease-in-out infinite;
@@ -252,15 +242,12 @@ body {
     }
          @keyframes float {
           0% {
-              /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
               transform: translatey(0px);
           }
           50% {
-              /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
               transform: translatey(-100px);
           }
           100% {
-              /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
               transform: translatey(0px);
           }
         }
@@ -430,7 +417,7 @@ body {
         font-weight: bolder;
         font-size: 35px;
         margin-right: 170px;
-        }
+    }
 
     .logo {
         padding: 40px;
@@ -456,7 +443,6 @@ body {
 
     #error {
         color: #fff;
-        /* text-shadow: 0 0 80px #ffffff,0 0 30px #636564,0 0 6px #0000ff; */
     }
 
     #error span {
@@ -533,14 +519,13 @@ body {
     }
 /*End of timer bar styling*/
    
-
 /* Image Positioning and Animation */
     .bed {
         width: 143px;
         height: 96px;
         top: 388px;
         left: 96px;
-        position:absolute;
+        position: absolute;
     }
     .chair {
         width: 130px;
@@ -714,7 +699,6 @@ body {
     }
 /* End of CSS for Welcome Page Title */
 }
-
 
 
 /* DESKTOP 1310 x 768 */
@@ -917,7 +901,6 @@ body {
         margin:0; 
     }
 /* End of CSS for Welcome Page Title */
-
 
 /* styling for link buttons */
     a {

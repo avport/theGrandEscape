@@ -13,9 +13,7 @@ const rules = {
       <a class="rulesbutton" href="#!/hard">Hard</a>
     </div>
   </section>
-  `,
-
-  
+  `, 
 }
 
 angular.module("app").component("rules", rules);

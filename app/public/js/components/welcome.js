@@ -1,7 +1,6 @@
 "use strict";
 const welcome = {
   template: `
-
   <body >
   <section class="welcome">
       <section class="title">
@@ -15,10 +14,7 @@ const welcome = {
       </section>
   </section>
   <body>
-  `,
-
-
-  
+  `,  
 }
 
 angular.module("app").component("welcome", welcome);
