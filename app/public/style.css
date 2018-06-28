@@ -175,10 +175,10 @@ img, .title {
     }
   
     .mermaid {
-        width: 65px;
-        height: 70px;
-        top: -39px;
-        left: -96px;
+        width: 66px;
+        height: 73px;
+        top: 105px;
+        left: 0px;
         position: absolute;
     }
   
@@ -191,7 +191,11 @@ img, .title {
     }
   
      .rug {
-        display: none;
+        width: 193px;
+        height: 101px;
+        top: 263px;
+        left: 210px;
+        position: absolute;
     }
   
     .hats {
@@ -681,6 +685,14 @@ img, .title {
         left: 396px;
         position: absolute;
     }
+
+    .rug {
+        width: 344px;
+        height: 196px;
+        top: 568px;
+        left: 379px;
+        position: absolute;
+    }
   
     .hats {
         width: 47px;
@@ -908,6 +920,14 @@ img, .title {
         height: 172px;
         top: -57px;
         left: 560px;
+        position: absolute;
+    }
+
+    .rug {
+        width: 344px;
+        height: 196px;
+        top: 568px;
+        left: 379px;
         position: absolute;
     }
 
