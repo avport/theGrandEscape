@@ -617,25 +617,6 @@ img, .title {
    
 /* Image Positioning and Animation */
 
-    /* font size change animation */
-    /* @keyframes fontbulger {
-        0% {
-        font-size: 17px;
-        }
-        25% {
-        font-size: 19px;
-        }
-        50% {
-            font-size: 22px;
-        }
-        75% {
-            font-size: 19px; 
-        }
-        100% {
-        font-size: 17px;
-        }
-    } */
-
     .bed {
         width: 143px;
         height: 96px;
