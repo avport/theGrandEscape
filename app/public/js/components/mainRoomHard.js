@@ -123,7 +123,7 @@ const hard = {
       
     }
 
-  //  move();
+    move();
    
     function play(){
       let rename = document.getElementById("rename");

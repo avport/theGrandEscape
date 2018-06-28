@@ -123,7 +123,7 @@ const medium = {
       
     }
 
-  //  move();
+    move();
    
     function play(){
       let rename = document.getElementById("rename");
