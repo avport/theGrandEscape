@@ -101,7 +101,7 @@ const mainRoom = {
    function move() {
      let elem = document.getElementById("myBar");
      let height = 100;
-     let id = setInterval(frame, 600); //bigger the number the slower it moves
+     let id = setInterval(frame, 1200); //bigger the number the slower it moves
      function frame() {
       if (height === 0 && counter !== 5) {
         clearInterval(id);
