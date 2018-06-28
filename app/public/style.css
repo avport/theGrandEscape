@@ -5,7 +5,18 @@
 }
 
 body {
-    background-color: #2B4162;
+    background: url(./images/darkbrickwall.png) no-repeat center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 568px;
+    height: 320px;
+    position: relative;
+   
 }
 
 .landscape {
