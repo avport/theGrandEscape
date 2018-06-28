@@ -242,7 +242,26 @@ img, .title {
         border-radius: .75rem; 
         text-align: center;
         font-size: 23px;
-        height: 107px;
+        height: 55px;
+        width: 170px;
+    }
+
+    .tryAgain {
+        margin: 0 auto;
+        background-color:#2B4162;
+        color: lightgray;
+        letter-spacing: 2px;
+        position: fixed; 
+        z-index: 100000;
+        padding: 10px; 
+        font-family: 'Cormorant Unicase', serif;
+        top: 15%;
+        left: 0;
+        right: 0; 
+        border-radius: .75rem; 
+        text-align: center;
+        font-size: 23px;
+        height: 55px;
         width: 170px;
     }
 
@@ -681,7 +700,14 @@ img, .title {
     .correctAnswer  {
         padding: 18px; 
         font-size: 29px;
-        height: 140px;
+        height: 75px;
+        width: 223px;
+    }
+
+    .tryAgain {
+        padding: 18px; 
+        font-size: 29px;
+        height: 75px;
         width: 223px;
     }
 
@@ -908,10 +934,17 @@ img, .title {
     .correctAnswer  {
         padding: 15px;
         font-size: 40px;
-        height: 180px;
+        height: 85px;
         width: 244px;
     }
   
+    .tryAgain {
+        padding: 15px;
+        font-size: 40px;
+        height: 85px;
+        width: 244px;
+    }
+    
     .answer {
         font-size: 1.8rem; 
         line-height: 2; 

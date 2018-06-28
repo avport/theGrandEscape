@@ -12,26 +12,28 @@ const mainRoom = {
 
       <p class="correctAnswer" ng-show="$ctrl.showCorrect">Correct!</p>
 
+      <p class="tryAgain" ng-show="$ctrl.tryAgain">Try Again</p>
+
       <div>  
         <img remove-click ng-click="$ctrl.qPopup(3)" src="./images/growler.png" class="growler"> 
       </div>
       <div>  
-        <img   src="./images/globe.png" class="globe">  
+        <img  ng-click="$ctrl.try()" src="./images/globe.png" class="globe">  
         <img remove-click ng-click="$ctrl.qPopup(0)" src="./images/octopuspainting.png" class="octopus">
       </div>
       <div>
-      <img  src="./images/desktopclock.png" class="clock">
+      <img  ng-click="$ctrl.try()" src="./images/desktopclock.png" class="clock">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(1)" src="./images/bedpillow.png" class="bed">
-        <img  src="./images/mermaidpainting.png" class="mermaid">
+        <img  ng-click="$ctrl.try()" src="./images/mermaidpainting.png" class="mermaid">
       </div>
       <div>
-        <img  src="./images/sailorhats.png" class="hats">
+        <img  ng-click="$ctrl.try()" src="./images/sailorhats.png" class="hats">
       </div>
       <div>
         <img remove-click ng-click="$ctrl.qPopup(4)" src="./images/lowdresser.png" class="dresser">
-        <img  ng-click = "" src="./images/rug.png" class="rug">
+        <img  ng-click="$ctrl.try()" src="./images/rug.png" class="rug">
       </div>
       <div></div>
       <div>
@@ -72,6 +74,13 @@ const mainRoom = {
       vm.qA = vm.questions[index];
     }
 
+    vm.try = () => {
+      vm.tryAgain = true;
+      $timeout (()=>{
+        vm.tryAgain = false;
+      }, 1000);
+    }
+
     vm.guess = (correct) => {
       vm.show = true;
       if (!correct) {
@@ -88,7 +97,6 @@ const mainRoom = {
         $timeout( ()=>{
         vm.showCorrect = false;
         }, 1000);
-        
       }
 
       if (counter === 5) {
