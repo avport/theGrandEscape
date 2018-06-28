@@ -11,7 +11,6 @@ const mainRoom = {
       </section>
 
       <p class="correctAnswer" ng-show="$ctrl.showCorrect">Correct!</p>
-
       <p class="tryAgain" ng-show="$ctrl.tryAgain">Try Again</p>
 
       <div>  
