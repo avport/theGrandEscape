@@ -202,11 +202,7 @@ img, .title {
     }
   
      .rug {
-        width: 193px;
-        height: 101px;
-        top: 263px;
-        left: 210px;
-        position: absolute;
+        display: none;
     }
   
     .hats {
@@ -815,6 +811,7 @@ img, .title {
     .logo {
         padding: 40px;
         font-size: 150px;
+        width: 100vw;
     }
 
     div p { 
@@ -1038,8 +1035,9 @@ img, .title {
         height: 400px;
         width: 700px;
         padding: 30px;
-        margin-top: 50px;
+        margin-top: 100px;
         line-height: 40px;
+        margin-left: 400px;
     }
   
     .rulesbutton {
